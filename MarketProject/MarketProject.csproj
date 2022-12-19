@@ -111,6 +111,7 @@
     <Compile Include="Entities\Concrete\Supplier.cs" />
     <Compile Include="Entities\Concrete\Waybill.cs" />
     <Compile Include="Entities\Dtos\CustomerTotalDebtDto.cs" />
+    <Compile Include="Entities\Dtos\SaleProductDto.cs" />
     <Compile Include="Entities\Dtos\UserForLoginDto.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -244,6 +245,10 @@
     <Compile Include="Migrations\202212191056488_aey3702.designer.cs">
       <DependentUpon>202212191056488_aey3702.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212191417553_aey3703.cs" />
+    <Compile Include="Migrations\202212191417553_aey3703.designer.cs">
+      <DependentUpon>202212191417553_aey3703.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -315,6 +320,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212191056488_aey3702.resx">
       <DependentUpon>202212191056488_aey3702.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212191417553_aey3703.resx">
+      <DependentUpon>202212191417553_aey3703.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

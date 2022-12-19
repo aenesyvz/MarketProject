@@ -42,6 +42,7 @@ namespace MarketProject.Forms.Admin
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(20, 16);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(615, 560);
             this.dataGridView1.TabIndex = 0;
@@ -49,23 +50,23 @@ namespace MarketProject.Forms.Admin
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sans Serif Collection", 6.749999F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.749999F);
             this.label1.Location = new System.Drawing.Point(643, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 138);
+            this.label1.Size = new System.Drawing.Size(119, 90);
             this.label1.TabIndex = 1;
             this.label1.Text = "en çok satandan \r\nen az satana doğru\r\n yani ürünler \r\ntablosuna DESC sql \r\nsorgus" +
     "u atılarak\r\nsıralanmalı";
             // 
             // EnCokSatanUrunler
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(782, 591);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Font = new System.Drawing.Font("Sans Serif Collection", 8.25F);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -73,6 +74,7 @@ namespace MarketProject.Forms.Admin
             this.Name = "EnCokSatanUrunler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "En Çok Satan Ürünler";
+            this.Load += new System.EventHandler(this.EnCokSatanUrunler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -5,6 +5,7 @@ using MarketProject.DataAccess.Concrete;
 using MarketProject.Entities.Concrete;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace MarketProject.Business.Concrete
 {
@@ -30,6 +31,11 @@ namespace MarketProject.Business.Concrete
         public IDataResult<Customer> GetById(int id)
         {
             return new SuccessDataResult<Customer>(_customerDal.Get(x => x.Id == id));
+        }
+
+        public IDataResult<Customer> GetByPhoneNumber(string phoneNumber)
+        {
+            return new SuccessDataResult<Customer>(_customerDal.GetList().Where(x => x.PhoneNumber == phoneNumber).FirstOrDefault());
         }
 
         public IDataResult<List<Customer>> GetList()

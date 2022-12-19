@@ -197,5 +197,20 @@ namespace MarketProject.Forms.Admin
             }
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            LoadData();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var response = _customerService.GetByPhoneNumber(textBox1.Text);
+            if (response.Success)
+            {
+                dataGridView1.DataSource = response.Data;
+            }
+        }
     }
 }

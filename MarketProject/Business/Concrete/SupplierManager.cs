@@ -28,6 +28,11 @@ namespace MarketProject.Business.Concrete
             return new SuccessDataResult<Supplier>(_supplierDal.Get(x => x.Id == id));
         }
 
+        public IDataResult<Supplier> GetByPhoneNumberLike(string phoneNumber)
+        {
+            return new SuccessDataResult<Supplier>(_supplierDal.GetList().Where(x => x.PhoneNumber == phoneNumber).FirstOrDefault());
+        }
+
         public IDataResult<List<Supplier>> GetList()
         {
             return new SuccessDataResult<List<Supplier>>(_supplierDal.GetList().ToList());

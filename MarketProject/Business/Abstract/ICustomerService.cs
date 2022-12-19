@@ -11,5 +11,6 @@ namespace MarketProject.Business.Abstract
         IResult Delete(Customer customer);
         IDataResult<List<Customer>> GetList();
         IDataResult<Customer> GetById(int id);
+        IDataResult<Customer> GetByPhoneNumber(string phoneNumber);
     }
 }
