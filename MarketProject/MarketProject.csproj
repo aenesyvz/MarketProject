@@ -45,6 +45,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -117,11 +118,119 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Admin\BorcIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\BorcIslemleri.Designer.cs">
+      <DependentUpon>BorcIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\EnCokSatanUrunler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\EnCokSatanUrunler.Designer.cs">
+      <DependentUpon>EnCokSatanUrunler.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Admin\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Admin\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\MarketKarZararRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\MarketKarZararRapor.Designer.cs">
+      <DependentUpon>MarketKarZararRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\MarketSatislari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\MarketSatislari.Designer.cs">
+      <DependentUpon>MarketSatislari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\MusteriBorc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\MusteriBorc.Designer.cs">
+      <DependentUpon>MusteriBorc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\MusteriBorcDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\MusteriBorcDetay.Designer.cs">
+      <DependentUpon>MusteriBorcDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\MusteriIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\MusteriIslemleri.Designer.cs">
+      <DependentUpon>MusteriIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\RaporAlim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\RaporAlim.Designer.cs">
+      <DependentUpon>RaporAlim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\SatisIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\SatisIslemleri.Designer.cs">
+      <DependentUpon>SatisIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\SatisTrendi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\SatisTrendi.Designer.cs">
+      <DependentUpon>SatisTrendi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\TedarikciAnaEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\TedarikciAnaEkran.Designer.cs">
+      <DependentUpon>TedarikciAnaEkran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\TedarikciBorc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\TedarikciBorc.Designer.cs">
+      <DependentUpon>TedarikciBorc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\TedarikciIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\TedarikciIslemleri.Designer.cs">
+      <DependentUpon>TedarikciIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\TopluMusteriBorcRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\TopluMusteriBorcRapor.Designer.cs">
+      <DependentUpon>TopluMusteriBorcRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\UrunEkleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\UrunEkleme.Designer.cs">
+      <DependentUpon>UrunEkleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\UrunIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\UrunIslemleri.Designer.cs">
+      <DependentUpon>UrunIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\UrunKarZarar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\UrunKarZarar.Designer.cs">
+      <DependentUpon>UrunKarZarar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\UrunStokGor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\UrunStokGor.Designer.cs">
+      <DependentUpon>UrunStokGor.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202212191015237_init.cs" />
     <Compile Include="Migrations\202212191015237_init.designer.cs">
@@ -140,6 +249,63 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\BorcIslemleri.resx">
+      <DependentUpon>BorcIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\EnCokSatanUrunler.resx">
+      <DependentUpon>EnCokSatanUrunler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\MarketKarZararRapor.resx">
+      <DependentUpon>MarketKarZararRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\MarketSatislari.resx">
+      <DependentUpon>MarketSatislari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\MusteriBorc.resx">
+      <DependentUpon>MusteriBorc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\MusteriBorcDetay.resx">
+      <DependentUpon>MusteriBorcDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\MusteriIslemleri.resx">
+      <DependentUpon>MusteriIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\RaporAlim.resx">
+      <DependentUpon>RaporAlim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\SatisIslemleri.resx">
+      <DependentUpon>SatisIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\SatisTrendi.resx">
+      <DependentUpon>SatisTrendi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\TedarikciAnaEkran.resx">
+      <DependentUpon>TedarikciAnaEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\TedarikciBorc.resx">
+      <DependentUpon>TedarikciBorc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\TedarikciIslemleri.resx">
+      <DependentUpon>TedarikciIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\TopluMusteriBorcRapor.resx">
+      <DependentUpon>TopluMusteriBorcRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\UrunEkleme.resx">
+      <DependentUpon>UrunEkleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\UrunIslemleri.resx">
+      <DependentUpon>UrunIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\UrunKarZarar.resx">
+      <DependentUpon>UrunKarZarar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\UrunStokGor.resx">
+      <DependentUpon>UrunStokGor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212191015237_init.resx">
       <DependentUpon>202212191015237_init.cs</DependentUpon>
