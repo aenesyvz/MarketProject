@@ -120,7 +120,7 @@ namespace MarketProject.Forms.Admin
             foreach (var item in listBox1.Items)
             {
                 string selectedItem = item.ToString();
-                string[] prop = selectedItem.Split("");
+                string[] prop = selectedItem.Split(' ');
 
                 Product _product = _productService.GetByBarcode(prop[0]).Data;
                 if (_product != null)
@@ -159,7 +159,7 @@ namespace MarketProject.Forms.Admin
                 foreach (var item in listBox1.Items)
                 {
                     string selectedItem = item.ToString();
-                    string[] prop = selectedItem.Split(" ");
+                    string[] prop = selectedItem.Split(' ');
 
                     Product _product = _productService.GetByBarcode(prop[0]).Data;
                     if (_product != null)
