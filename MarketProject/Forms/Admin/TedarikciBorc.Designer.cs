@@ -31,7 +31,6 @@ namespace MarketProject.Forms.Admin
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TedarikciBorc));
-            this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -46,19 +45,9 @@ namespace MarketProject.Forms.Admin
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sans Serif Collection", 6.749999F);
-            this.label1.Location = new System.Drawing.Point(28, 408);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(313, 92);
-            this.label1.TabIndex = 43;
-            this.label1.Text = "buraya ad soyad telf toplam borç otomatik gelecek\r\nödenen borç kendimiz gircez\r\nk" +
-    "alan borcu gösterecek\r\n?????\r\n";
             // 
             // button2
             // 
@@ -204,14 +193,24 @@ namespace MarketProject.Forms.Admin
             this.dataGridView1.Size = new System.Drawing.Size(608, 501);
             this.dataGridView1.TabIndex = 44;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Sans Serif Collection", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(302, 490);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(251, 23);
+            this.label8.TabIndex = 45;
+            this.label8.Text = "buraya tedarikçi borç listesi bağlanacak";
+            // 
             // TedarikciBorc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1179, 525);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
@@ -240,8 +239,6 @@ namespace MarketProject.Forms.Admin
         }
 
         #endregion
-
-        private Label label1;
         private Button button2;
         private TextBox textBox7;
         private TextBox textBox6;
@@ -256,5 +253,6 @@ namespace MarketProject.Forms.Admin
         private Label label3;
         private Label label2;
         private DataGridView dataGridView1;
+        private Label label8;
     }
 }

@@ -111,13 +111,13 @@ namespace MarketProject.Forms.Admin
             this.chart1.Location = new System.Drawing.Point(3, 2);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.Name = "SatısTrendi";
             this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(699, 513);
             this.chart1.TabIndex = 7;
             this.chart1.Text = "chart1";
-            this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // SatisTrendi
             // 

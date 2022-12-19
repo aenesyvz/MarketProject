@@ -50,11 +50,12 @@ namespace MarketProject.Forms.Admin
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sans Serif Collection", 6.749999F);
-            this.label1.Location = new System.Drawing.Point(652, 49);
+            this.label1.Location = new System.Drawing.Point(643, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 69);
+            this.label1.Size = new System.Drawing.Size(133, 138);
             this.label1.TabIndex = 1;
-            this.label1.Text = "en çok satandan \r\nen az satana doğru\r\nürünler";
+            this.label1.Text = "en çok satandan \r\nen az satana doğru\r\n yani ürünler \r\ntablosuna DESC sql \r\nsorgus" +
+    "u atılarak\r\nsıralanmalı";
             // 
             // EnCokSatanUrunler
             // 

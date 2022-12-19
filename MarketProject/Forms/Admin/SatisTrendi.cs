@@ -20,11 +20,14 @@ namespace MarketProject.Forms.Admin
         private void SatisTrendi_Load(object sender, EventArgs e)
         {
             // CHART baslangic komut
-        }
+            chart1.Series["SatisTrendi"].Points.AddXY("tarih1", 15);  // normalde 15 yerine ilgili tarihin satış verisi
+            chart1.Series["SatisTrendi"].Points.AddXY("tarih2", 5);
+            chart1.Series["SatisTrendi"].Points.AddXY("tarih3", 15);
+            chart1.Series["SatisTrendi"].Points.AddXY("tarih4", 25);
+            chart1.Series["SatisTrendi"].Points.AddXY("tarih5", 55);
+            chart1.Series["SatisTrendi"].Points.AddXY("tarih6", 95);
+            chart1.Series["SatisTrendi"].Points.AddXY("tarih7", 45);
 
-        private void chart1_Click(object sender, EventArgs e)
-        {
-            // chart
         }
     }
 }
