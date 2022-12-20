@@ -13,5 +13,6 @@ namespace MarketProject.Business.Abstract
         IDataResult<Product> GetById(int id);
         IDataResult<Product> GetByCode(string code);
         IDataResult<Product> GetByBarcode(string code);
+        IDataResult<List<Product>> GetListLowStockProduct();
     }
 }

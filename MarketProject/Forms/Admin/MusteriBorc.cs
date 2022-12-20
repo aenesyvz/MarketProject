@@ -1,5 +1,7 @@
 ﻿using MarketProject.Business.Abstract;
 using MarketProject.Business.Concrete;
+using MarketProject.Entities.Concrete;
+using MarketProject.Entities.Dtos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,8 +19,9 @@ namespace MarketProject.Forms.Admin
         private readonly ICustomerService _customerService = new CustomerManager();
         private readonly IDebtCustomerService _debtCustomerService = new DebtCustomerManager();
 
-        //List<CustomerTotalDebt> customerTotalDebts;
-        //CustomerTotalDebt customerTotalDebt;
+        List<CustomerTotalDebtDto> customerTotalDebts;
+        CustomerTotalDebtDto customerTotalDebt;
+        int _customerId;
         public MusteriBorc()
         {
             InitializeComponent();
@@ -26,21 +29,23 @@ namespace MarketProject.Forms.Admin
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*int select = dataGridView1.SelectedCells[0].RowIndex;
+            int select = dataGridView1.SelectedCells[0].RowIndex;
             int id = Int32.Parse(dataGridView1.Rows[select].Cells[0].Value.ToString());
 
+            _customerId = id;
             customerTotalDebt = _debtCustomerService.GetTotalDebtByCustomerId(id).Data;
             textBox2.Text = dataGridView1.Rows[select].Cells[1].Value.ToString();
+          
             textBox3.Text = dataGridView1.Rows[select].Cells[2].Value.ToString();
             textBox4.Text = dataGridView1.Rows[select].Cells[3].Value.ToString();
             textBox5.Text = dataGridView1.Rows[select].Cells[4].Value.ToString();
             textBox6.Text = dataGridView1.Rows[select].Cells[5].Value.ToString();
-            textBox7.Text = dataGridView1.Rows[select].Cells[6].Value.ToString();*/
+            textBox7.Text = dataGridView1.Rows[select].Cells[6].Value.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MusteriBorcDetay musteriBorcDetay = new MusteriBorcDetay();
+            MusteriBorcDetay musteriBorcDetay = new MusteriBorcDetay(_customerId);
             musteriBorcDetay.Show();
         }
 
@@ -56,7 +61,7 @@ namespace MarketProject.Forms.Admin
 
         private void LoadData()
         {
-            /*var response = _debtCustomerService.GetListCustomerTotalDebt();
+            var response = _debtCustomerService.GetListCustomerTotalDebt();
             if (response.Success)
             {
                 customerTotalDebts = response.Data;
@@ -66,7 +71,12 @@ namespace MarketProject.Forms.Admin
             else
             {
                 MessageBox.Show("Veriler getirilemedi", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

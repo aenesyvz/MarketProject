@@ -3,7 +3,6 @@ using MarketProject.Core.Utilities.Results;
 using MarketProject.DataAccess.Abstract;
 using MarketProject.DataAccess.Concrete;
 using MarketProject.Entities.Concrete;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

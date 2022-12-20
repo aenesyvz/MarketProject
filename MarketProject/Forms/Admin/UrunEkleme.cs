@@ -24,7 +24,7 @@ namespace MarketProject.Forms.Admin
 
         List<Supplier> suppliers;
         Supplier supplier;
-        float _kar = 1;
+        double _kar = 1;
         public UrunEkleme()
         {
             InitializeComponent();
@@ -47,6 +47,7 @@ namespace MarketProject.Forms.Admin
                 string[] lines = File.ReadAllLines(path, Encoding.GetEncoding("windows-1254"));
                 MessageBox.Show("Seçilen dosya: " + ofd.FileName, "Dosya başarıyla seçildi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ofd.Reset();
+                _kar = Convert.ToDouble(textBox1.Text.ToString());
                 foreach (var line in lines)
                 {
                     var data = line.Split(' ');
@@ -73,15 +74,16 @@ namespace MarketProject.Forms.Admin
                             Code = waybill.ProductCode,
                             BarcodeNo = "855" + waybill.ProductCode + "555",
                             Amount = waybill.Amount,
-                            UnitOfPrice =Convert.ToDecimal(change * _kar),
+                            UnitOfPrice =Convert.ToDecimal(change * _kar / 10),
                             WayBillId = waybill.WaybillId,
                         };
                         _productService.Add(createdProduct);
                     }
                     else
                     {
+                        product.Name = waybill.ProductName;      
                         product.Amount += waybill.Amount;
-                        product.UnitOfPrice = Convert.ToDecimal(waybill.Price * _kar);
+                        product.UnitOfPrice = Convert.ToDecimal(waybill.Price * _kar / 10);
                         _productService.Update(product);
                     }
 
