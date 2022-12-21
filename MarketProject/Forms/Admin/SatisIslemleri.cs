@@ -19,7 +19,7 @@ namespace MarketProject.Forms.Admin
         private readonly IProductService _productService = new ProductManager();
         private readonly ISaleService _saleService = new SaleManager();
         private readonly IDebtCustomerService _debtCustomerService = new DebtCustomerManager();
-
+        private readonly ICreditSaleService _creditSaleService= new CreditSaleManager();
         List<Customer> customers;
         Customer customer;
         Product product;
@@ -156,6 +156,17 @@ namespace MarketProject.Forms.Admin
 
             if (customer != null)
             {
+
+                DebtCustomer debtCustomer = new DebtCustomer();
+                debtCustomer.CustomerId = customer.Id;
+                debtCustomer.AddedDate = DateTime.Now;
+                debtCustomer.AmountOfDebt = totalPrice;
+                debtCustomer.RemaingDebt = totalPrice;
+                debtCustomer.AmountPaid = 0;
+
+
+               int debtCustomerId =  _debtCustomerService.AddToMap(debtCustomer).Data.Id;
+
                 foreach (var item in listBox1.Items)
                 {
                     string selectedItem = item.ToString();
@@ -166,25 +177,22 @@ namespace MarketProject.Forms.Admin
                     {
                         _product.Amount -= Convert.ToInt32(prop[2]);
                         Sale sale = new Sale();
+                        CreditSale creditSale = new CreditSale();
                         sale.AddedDate = DateTime.Now;
                         sale.ProductId = _product.Id;
                         sale.Amount = Convert.ToInt32(prop[2]);
                         sale.Price = Convert.ToDecimal(prop[6]);
-                        _saleService.Add(sale);
+                        
+                         var result = _saleService.AddToMap(sale);
+                         creditSale.DebtCustomerId = debtCustomerId;
+                         creditSale.CustomerId = customer.Id;
+                         creditSale.SaleId = result.Data.Id;
+                        _creditSaleService.Add(creditSale);
                         _productService.Update(_product);
                     }
 
                 }
 
-                DebtCustomer debtCustomer = new DebtCustomer();
-                debtCustomer.CustomerId = customer.Id;
-                debtCustomer.AddedDate = DateTime.Now;
-                debtCustomer.AmountOfDebt = totalPrice;
-                debtCustomer.RemaingDebt = totalPrice;
-                debtCustomer.AmountPaid = 0;
-
-
-                _debtCustomerService.Add(debtCustomer);
 
                 listBox1.Items.Clear();
                 totalPrice = 0;

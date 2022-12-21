@@ -34,42 +34,34 @@ namespace MarketProject.Forms.Admin
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SatisTrendi));
-            this.listView1 = new System.Windows.Forms.ListView();
             this.labelBaslangic = new System.Windows.Forms.Label();
             this.labelBitis = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(711, 12);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(449, 321);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // labelBaslangic
             // 
             this.labelBaslangic.AutoSize = true;
-            this.labelBaslangic.Font = new System.Drawing.Font("Sans Serif Collection", 6.749999F);
+            this.labelBaslangic.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.749999F);
             this.labelBaslangic.Location = new System.Drawing.Point(753, 369);
             this.labelBaslangic.Name = "labelBaslangic";
-            this.labelBaslangic.Size = new System.Drawing.Size(116, 23);
+            this.labelBaslangic.Size = new System.Drawing.Size(105, 15);
             this.labelBaslangic.TabIndex = 2;
             this.labelBaslangic.Text = "Başlangıç Tarihi =";
             // 
             // labelBitis
             // 
             this.labelBitis.AutoSize = true;
-            this.labelBitis.Font = new System.Drawing.Font("Sans Serif Collection", 6.749999F);
+            this.labelBitis.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.749999F);
             this.labelBitis.Location = new System.Drawing.Point(753, 408);
             this.labelBitis.Name = "labelBitis";
-            this.labelBitis.Size = new System.Drawing.Size(81, 23);
+            this.labelBitis.Size = new System.Drawing.Size(74, 15);
             this.labelBitis.TabIndex = 3;
             this.labelBitis.Text = "Bitiş Tarihi =";
             // 
@@ -78,7 +70,7 @@ namespace MarketProject.Forms.Admin
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.dateTimePicker1.Location = new System.Drawing.Point(875, 370);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(255, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(255, 26);
             this.dateTimePicker1.TabIndex = 4;
             // 
             // dateTimePicker2
@@ -87,13 +79,13 @@ namespace MarketProject.Forms.Admin
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.dateTimePicker2.Location = new System.Drawing.Point(875, 409);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(255, 22);
+            this.dateTimePicker2.Size = new System.Drawing.Size(255, 26);
             this.dateTimePicker2.TabIndex = 5;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Tomato;
-            this.button1.Font = new System.Drawing.Font("Sans Serif Collection", 5.25F);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(942, 448);
             this.button1.Name = "button1";
@@ -101,6 +93,7 @@ namespace MarketProject.Forms.Admin
             this.button1.TabIndex = 6;
             this.button1.Text = "HESAPLA";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // chart1
             // 
@@ -121,20 +114,30 @@ namespace MarketProject.Forms.Admin
             this.chart1.TabIndex = 7;
             this.chart1.Text = "chart1";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(743, 37);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(338, 315);
+            this.dataGridView1.TabIndex = 8;
+            // 
             // SatisTrendi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1172, 519);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.labelBitis);
             this.Controls.Add(this.labelBaslangic);
-            this.Controls.Add(this.listView1);
-            this.Font = new System.Drawing.Font("Sans Serif Collection", 8.25F);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -144,19 +147,19 @@ namespace MarketProject.Forms.Admin
             this.Text = "Satış Trendi";
             this.Load += new System.EventHandler(this.SatisTrendi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private ListView listView1;
         private Label labelBaslangic;
         private Label labelBitis;
         private DateTimePicker dateTimePicker1;
         private DateTimePicker dateTimePicker2;
         private Button button1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private DataGridView dataGridView1;
     }
 }

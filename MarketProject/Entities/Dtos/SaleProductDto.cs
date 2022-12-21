@@ -1,4 +1,5 @@
 ﻿using MarketProject.Core.Entities;
+using System;
 
 namespace MarketProject.Entities.Dtos
 {
@@ -9,5 +10,10 @@ namespace MarketProject.Entities.Dtos
         public string BarcodeNo { get; set; }
         public string Name { get; set; }
         public int Total { get; set; }
+    }
+    public class SaleTrendByDateDto : IDto
+    {
+        public DateTime SaleDate { get; set; }
+        public int Sum { get; set; }
     }
 }

@@ -39,16 +39,19 @@ namespace MarketProject.Forms.Admin
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // btnStokEkle
             // 
             this.btnStokEkle.BackColor = System.Drawing.Color.Tomato;
-            this.btnStokEkle.Font = new System.Drawing.Font("Sans Serif Collection", 5.25F);
+            this.btnStokEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
             this.btnStokEkle.ForeColor = System.Drawing.Color.White;
             this.btnStokEkle.Location = new System.Drawing.Point(460, 125);
             this.btnStokEkle.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -62,7 +65,7 @@ namespace MarketProject.Forms.Admin
             // btnStokGor
             // 
             this.btnStokGor.BackColor = System.Drawing.Color.Tomato;
-            this.btnStokGor.Font = new System.Drawing.Font("Sans Serif Collection", 5.25F);
+            this.btnStokGor.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
             this.btnStokGor.ForeColor = System.Drawing.Color.White;
             this.btnStokGor.Location = new System.Drawing.Point(460, 315);
             this.btnStokGor.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -76,22 +79,22 @@ namespace MarketProject.Forms.Admin
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sans Serif Collection", 9F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label1.Location = new System.Drawing.Point(381, 90);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(352, 29);
+            this.label1.Size = new System.Drawing.Size(298, 18);
             this.label1.TabIndex = 3;
             this.label1.Text = "Stok ekleme işlemlerine gitmek için tıklayınız";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Sans Serif Collection", 9F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label2.Location = new System.Drawing.Point(363, 278);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(394, 29);
+            this.label2.Size = new System.Drawing.Size(332, 18);
             this.label2.TabIndex = 4;
             this.label2.Text = "Stok görüntüleme işlemlerine gitmek için tıklayınız";
             // 
@@ -139,12 +142,34 @@ namespace MarketProject.Forms.Admin
             this.pictureBox5.TabIndex = 14;
             this.pictureBox5.TabStop = false;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Navy;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 90);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(257, 245);
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(366, 423);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(224, 55);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Stok Sayısı Azalan Ürünler";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // UrunIslemleri
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(994, 534);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox2);
@@ -153,7 +178,7 @@ namespace MarketProject.Forms.Admin
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnStokGor);
             this.Controls.Add(this.btnStokEkle);
-            this.Font = new System.Drawing.Font("Sans Serif Collection", 9F);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "UrunIslemleri";
@@ -162,6 +187,7 @@ namespace MarketProject.Forms.Admin
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,5 +202,7 @@ namespace MarketProject.Forms.Admin
         private PictureBox pictureBox2;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
+        private PictureBox pictureBox3;
+        private Button button1;
     }
 }

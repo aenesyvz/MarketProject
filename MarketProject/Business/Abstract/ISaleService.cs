@@ -1,6 +1,7 @@
 ﻿using MarketProject.Core.Utilities.Results;
 using MarketProject.Entities.Concrete;
 using MarketProject.Entities.Dtos;
+using System;
 using System.Collections.Generic;
 
 namespace MarketProject.Business.Abstract
@@ -15,5 +16,7 @@ namespace MarketProject.Business.Abstract
         IDataResult<Sale> AddToMap(Sale sale);
         IDataResult<List<Sale>> GetListDesc();
         IDataResult<List<SaleProductDto>> GetListSaleProductDesc();
+        IDataResult<List<SaleTrendByDateDto>> GetListSaleTrendByDate(DateTime start, DateTime finish);
+        
     }
 }

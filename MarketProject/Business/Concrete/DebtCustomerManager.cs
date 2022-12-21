@@ -78,5 +78,15 @@ namespace MarketProject.Business.Concrete
             _debtCustomerDal.Update(debtCustomer);
             return new SuccessResult();
         }
+
+        public IDataResult<DebtCustomer> AddToMap(DebtCustomer debtCustomer)
+        {
+            return new SuccessDataResult<DebtCustomer>(_debtCustomerDal.AddMap(debtCustomer));
+        }
+
+        public IDataResult<List<DebtCustomer>> GetListByCustomerId(int customerId)
+        {
+            return new SuccessDataResult<List<DebtCustomer>>(_debtCustomerDal.GetList(x => x.CustomerId == customerId).ToList());
+        }
     }
 }

@@ -28,5 +28,16 @@ namespace MarketProject.Forms.Admin
             UrunStokGor urunStokGor = new UrunStokGor();
             urunStokGor.Show();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            StokTakip stokTakip = new StokTakip();
+            stokTakip.Show();
+        }
     }
 }

@@ -4,8 +4,10 @@ using MarketProject.DataAccess.Abstract;
 using MarketProject.DataAccess.Concrete;
 using MarketProject.Entities.Concrete;
 using MarketProject.Entities.Dtos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Security.Policy;
 
 namespace MarketProject.Business.Concrete
@@ -49,16 +51,27 @@ namespace MarketProject.Business.Concrete
 
         public IDataResult<List<SaleProductDto>> GetListSaleProductDesc()
         {
-            List<Sale> sales = _saleDal.GetList().ToList();
-            var items = sales.Select(x => new SaleProductDto()
+          
+            List<SaleProductDto> sales = _saleDal.GetList().GroupBy(l => l.ProductId).Select(c => new SaleProductDto
             {
-                ProductId = x.ProductId,
-                BarcodeNo = _productService.GetById(x.ProductId).Data.BarcodeNo,
-                Code = _productService.GetById(x.ProductId).Data.Code,
-                Name = _productService.GetById(x.ProductId).Data.Name,
-                Total = _saleDal.GetList(y => y.ProductId == x.ProductId).ToList().Sum(z => z.Amount)
-            }).ToList().OrderByDescending(f => f.Total) ;
-            return new SuccessDataResult<List<SaleProductDto>>(items.ToList());
+                ProductId = c.Key,
+                BarcodeNo = _productService.GetById(c.Key).Data.BarcodeNo,
+                Code = _productService.GetById(c.Key).Data.Code,
+                Name = _productService.GetById(c.Key).Data.Name,
+                Total = c.Sum(p => p.Amount)
+            }).OrderByDescending(x=>x.Total).ToList();
+            return new SuccessDataResult<List<SaleProductDto>>(sales);
+        }
+
+        public IDataResult<List<SaleTrendByDateDto>> GetListSaleTrendByDate(DateTime start, DateTime finish)
+        {
+            List<SaleTrendByDateDto> saleTrendByDateDtos = _saleDal.GetList().Where(x => x.AddedDate.Day >= start.Day && x.AddedDate.Day <= finish.Day).GroupBy(l => l.AddedDate.Day).Select(c => new SaleTrendByDateDto
+            {
+                SaleDate = c.First().AddedDate,
+                Sum = c.Sum(p => p.Amount)
+            }).ToList() ;
+          
+            return new SuccessDataResult<List<SaleTrendByDateDto>>(saleTrendByDateDtos);
         }
 
         public IResult Update(Sale sale)

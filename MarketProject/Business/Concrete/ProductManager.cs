@@ -44,6 +44,11 @@ namespace MarketProject.Business.Concrete
             return new SuccessDataResult<List<Product>>(_productDal.GetList().ToList());
         }
 
+        public IDataResult<List<Product>> GetListLowStockProduct()
+        {
+            return new SuccessDataResult<List<Product>>(_productDal.GetList().Where(x => x.Amount < 100).ToList());
+        }
+
         public IResult Update(Product product)
         {
             _productDal.Update(product);

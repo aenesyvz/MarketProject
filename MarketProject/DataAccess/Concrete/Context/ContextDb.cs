@@ -18,6 +18,7 @@ namespace MarketProject.DataAccess.Concrete.Context
         public DbSet<DebtCustomer> DebtCustomers { get; set; }
         public DbSet<Waybill> Waybills { get; set; }
         public DbSet<DebtSupplier> DebtSuppliers { get; set; }
+        public DbSet<CreditSale> CreditSales { get; set; }
 
     }
 }
