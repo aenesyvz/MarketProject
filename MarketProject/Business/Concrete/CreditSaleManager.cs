@@ -21,6 +21,22 @@ namespace MarketProject.Business.Concrete
             return new SuccessResult();
         }
 
+        public IResult Delete(CreditSale creditSale)
+        {
+            _creditSaleDal.Delete(creditSale);
+            return new SuccessResult();
+        }
+
+        public IDataResult<CreditSale> GetById(int saleId)
+        {
+            var response = _creditSaleDal.Get(x => x.SaleId == saleId);
+            if(response == null)
+            {
+                return new ErrorDataResult<CreditSale>("Satış bulunamadı");
+            }
+            return new SuccessDataResult<CreditSale>(response);
+        }
+
         public IDataResult<List<CreditSaleDto>> GetListByDebtCustomerId(int debtCustomerId)
         {
             return new SuccessDataResult<List<CreditSaleDto>>(_creditSaleDal.GetCreditSaleDtos(debtCustomerId).ToList());

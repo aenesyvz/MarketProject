@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MarketProject.Business.Abstract;
+using MarketProject.Business.Concrete;
+using MarketProject.Entities.Dtos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +16,8 @@ namespace MarketProject.Forms.Admin
 {
     public partial class UrunSilmeOnay : Form
     {
+        private readonly IAuthService _authService = new AuthManager();
+        public bool userToCheck = false;
         public UrunSilmeOnay()
         {
             InitializeComponent();
@@ -54,6 +59,23 @@ namespace MarketProject.Forms.Admin
                 textBox2.ForeColor = Color.Silver;
                 textBox2.PasswordChar = Convert.ToChar(none);
             }
+        }
+
+       
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UserForLoginDto userForLoginDto = new UserForLoginDto()
+            {
+                UserName = textBox1.Text.ToString(),
+                Password = textBox2.Text.ToString()
+            };
+            var response = _authService.Login(userForLoginDto);
+            if (response.Success)
+            {
+                userToCheck = true;
+            }
+            userToCheck = false;
         }
     }
 }

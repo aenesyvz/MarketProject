@@ -3,6 +3,7 @@ using MarketProject.Core.Utilities.Results;
 using MarketProject.DataAccess.Abstract;
 using MarketProject.DataAccess.Concrete;
 using MarketProject.Entities.Concrete;
+using MarketProject.Entities.Dtos;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,17 @@ namespace MarketProject.Business.Concrete
         {
             _managerDal.Add(manager);
             return new SuccessResult();
+        }
+
+        public IDataResult<Admin> AdminToCheck(UserForLoginDto userForLoginDto)
+        {
+            var response = _managerDal.Get(x => x.UserName == userForLoginDto.UserName && x.Password == userForLoginDto.Password);
+            if(response == null)
+            {
+                return new ErrorDataResult<Admin>("Kullanıcı bulunamadı");
+            }
+            
+            return new SuccessDataResult<Admin>(response);
         }
 
         public IResult Delete(Admin manager)
@@ -40,16 +52,6 @@ namespace MarketProject.Business.Concrete
         {
             _managerDal.Update(manager);
             return new SuccessResult();
-        }
-    }
-
-    public class AuthManager : IAuthService
-    {
-        private readonly IAdminService _adminService = new AdminManager();
-
-        public IDataResult<Admin> Login(Admin admin)
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

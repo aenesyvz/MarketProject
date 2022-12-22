@@ -1,11 +1,12 @@
 ﻿using MarketProject.Forms.Admin;
+using MarketProject.Forms.LoginScreen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MarketProject.Forms.Admin
+namespace MarketProject.Forms.LoginScreen
 {
     internal static class Program
     {
@@ -17,7 +18,7 @@ namespace MarketProject.Forms.Admin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new LoginScreen());
         }
     }
 }
