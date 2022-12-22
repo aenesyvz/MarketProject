@@ -68,6 +68,7 @@
     <Compile Include="Business\Abstract\ISupplierService.cs" />
     <Compile Include="Business\Abstract\IWaybillService.cs" />
     <Compile Include="Business\Concrete\AdminManager.cs" />
+    <Compile Include="Business\Concrete\AuthManager.cs" />
     <Compile Include="Business\Concrete\CreditSaleManager.cs" />
     <Compile Include="Business\Concrete\CustomerManager.cs" />
     <Compile Include="Business\Concrete\DebtCustomerManager.cs" />

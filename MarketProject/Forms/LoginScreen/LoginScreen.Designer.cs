@@ -49,6 +49,7 @@ namespace MarketProject.Forms.LoginScreen
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.panelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -59,7 +60,7 @@ namespace MarketProject.Forms.LoginScreen
             // 
             this.textBox2.Location = new System.Drawing.Point(0, 0);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
             this.textBox2.TabIndex = 0;
             // 
             // button1
@@ -73,7 +74,7 @@ namespace MarketProject.Forms.LoginScreen
             // 
             this.textBox3.Location = new System.Drawing.Point(0, 0);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.Size = new System.Drawing.Size(100, 22);
             this.textBox3.TabIndex = 0;
             // 
             // label1
@@ -112,7 +113,7 @@ namespace MarketProject.Forms.LoginScreen
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(356, 185);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(132, 24);
+            this.label6.Size = new System.Drawing.Size(165, 29);
             this.label6.TabIndex = 1;
             this.label6.Text = "Kullanıcı Adı:";
             // 
@@ -124,7 +125,7 @@ namespace MarketProject.Forms.LoginScreen
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(356, 284);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 24);
+            this.label7.Size = new System.Drawing.Size(75, 29);
             this.label7.TabIndex = 2;
             this.label7.Text = "Şifre:";
             // 
@@ -134,7 +135,7 @@ namespace MarketProject.Forms.LoginScreen
             this.textBox1.ForeColor = System.Drawing.Color.Silver;
             this.textBox1.Location = new System.Drawing.Point(354, 212);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(290, 29);
+            this.textBox1.Size = new System.Drawing.Size(290, 34);
             this.textBox1.TabIndex = 3;
             this.textBox1.Text = "Kullanıcı adı";
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
@@ -147,7 +148,7 @@ namespace MarketProject.Forms.LoginScreen
             this.textBox4.Location = new System.Drawing.Point(354, 311);
             this.textBox4.Name = "textBox4";
             this.textBox4.PasswordChar = '*';
-            this.textBox4.Size = new System.Drawing.Size(290, 29);
+            this.textBox4.Size = new System.Drawing.Size(290, 34);
             this.textBox4.TabIndex = 4;
             this.textBox4.Text = "Şifre";
             this.textBox4.Enter += new System.EventHandler(this.textBox4_Enter);
@@ -175,7 +176,7 @@ namespace MarketProject.Forms.LoginScreen
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(12, 135);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(266, 37);
+            this.label5.Size = new System.Drawing.Size(330, 46);
             this.label5.TabIndex = 0;
             this.label5.Text = "ÇİÇEK MARKET";
             // 
@@ -187,7 +188,7 @@ namespace MarketProject.Forms.LoginScreen
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(80, 400);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(138, 24);
+            this.label8.Size = new System.Drawing.Size(172, 29);
             this.label8.TabIndex = 1;
             this.label8.Text = "Hoşgeldiniz...";
             // 
@@ -286,5 +287,6 @@ namespace MarketProject.Forms.LoginScreen
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
+        private PageSetupDialog pageSetupDialog1;
     }
 }

@@ -1,4 +1,8 @@
 ﻿
+using MarketProject.Business.Abstract;
+using MarketProject.Business.Concrete;
+using MarketProject.Entities.Dtos;
+using MarketProject.Forms.Admin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +19,7 @@ namespace MarketProject.Forms.LoginScreen
 {
     public partial class LoginScreen : Form
     {
+        private readonly IAuthService _authService = new AuthManager();
         public LoginScreen()
         {
             InitializeComponent();
@@ -61,7 +66,27 @@ namespace MarketProject.Forms.LoginScreen
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // giris butonuna basılınca yapılması gerekenler
+            UserForLoginDto userForLoginDto = new UserForLoginDto()
+            {
+                UserName = textBox1.Text.ToString(),
+                Password = textBox4.Text.ToString()
+            };
+
+            var response = _authService.Login(userForLoginDto);
+            if (response.Success)
+            {
+                MainForm mainForm = new MainForm();
+                mainForm.IsMdiContainer = true;
+                // mainForm.MdiParent = this;
+                
+                mainForm.Show();
+               
+
+            }
+            else
+            {
+                MessageBox.Show("Hata", "Kimsin ulen!");
+            }
         }
     }
 }

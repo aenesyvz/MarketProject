@@ -9,5 +9,7 @@ namespace MarketProject.Business.Abstract
     {
         IResult Add(CreditSale creditSale);
         IDataResult<List<CreditSaleDto>> GetListByDebtCustomerId(int debtcustomerId);
+        IDataResult<CreditSale> GetById(int saleId);
+        IResult Delete(CreditSale creditSale);
     }
 }
