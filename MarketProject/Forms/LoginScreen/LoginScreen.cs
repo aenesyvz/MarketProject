@@ -83,15 +83,20 @@ namespace MarketProject.Forms.LoginScreen
                 /*LoginScreen login = new LoginScreen();
                 login.Close();*/
 
-                textBox1.Text = "Kullanıcı Adı";
+                textBox1.Text = "";
                 textBox1.ForeColor = Color.Silver;
-                textBox4.Text = "Şifre";
+                textBox4.Text = "";
                 textBox4.ForeColor = Color.Silver;
             }
             else
             {
                 MessageBox.Show("Hata", "Kimsin ulen!");
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
