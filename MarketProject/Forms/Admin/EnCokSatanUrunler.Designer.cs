@@ -76,7 +76,7 @@ namespace MarketProject.Forms.Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(224)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(815, 591);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);

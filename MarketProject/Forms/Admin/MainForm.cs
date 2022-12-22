@@ -78,7 +78,7 @@ namespace MarketProject.Forms.Admin
             OpenChildForm(new RaporAlim(), sender);
         }
 
-        private void YoneticiForm_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
             timer1.Start();
         }

@@ -77,11 +77,16 @@ namespace MarketProject.Forms.LoginScreen
             {
                 MainForm mainForm = new MainForm();
                 mainForm.IsMdiContainer = true;
-                // mainForm.MdiParent = this;
-                
+                //mainForm.MdiParent = this;
                 mainForm.Show();
-               
 
+                /*LoginScreen login = new LoginScreen();
+                login.Close();*/
+
+                textBox1.Text = "Kullanıcı Adı";
+                textBox1.ForeColor = Color.Silver;
+                textBox4.Text = "Şifre";
+                textBox4.ForeColor = Color.Silver;
             }
             else
             {
