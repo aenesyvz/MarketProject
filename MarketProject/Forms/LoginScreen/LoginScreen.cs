@@ -84,13 +84,11 @@ namespace MarketProject.Forms.LoginScreen
                 login.Close();*/
 
                 textBox1.Text = "";
-                textBox1.ForeColor = Color.Silver;
                 textBox4.Text = "";
-                textBox4.ForeColor = Color.Silver;
             }
             else
             {
-                MessageBox.Show("Hata", "Kimsin ulen!");
+                MessageBox.Show("Lütfen geçerli bir kullanıcı adı veya şifre giriniz!", "DİKKAT",MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
