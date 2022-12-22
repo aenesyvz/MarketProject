@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MarketProject.Forms.LoginScreen
+namespace MarketProject.Forms.Admin
 {
     internal static class Program
     {

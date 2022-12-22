@@ -127,12 +127,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Admin\BorcIslemleri.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Admin\BorcIslemleri.Designer.cs">
-      <DependentUpon>BorcIslemleri.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Admin\EnCokSatanUrunler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +174,12 @@
     </Compile>
     <Compile Include="Forms\Admin\MusteriIslemleri.Designer.cs">
       <DependentUpon>MusteriIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\MusteriIslemleriAnaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\MusteriIslemleriAnaForm.Designer.cs">
+      <DependentUpon>MusteriIslemleriAnaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin\RaporAlim.cs">
       <SubType>Form</SubType>
@@ -253,6 +253,12 @@
     <Compile Include="Forms\Admin\UrunKarZarar.Designer.cs">
       <DependentUpon>UrunKarZarar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Admin\UrunSilmeOnay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\UrunSilmeOnay.Designer.cs">
+      <DependentUpon>UrunSilmeOnay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Admin\UrunStokGor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -291,9 +297,6 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Admin\BorcIslemleri.resx">
-      <DependentUpon>BorcIslemleri.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\EnCokSatanUrunler.resx">
       <DependentUpon>EnCokSatanUrunler.cs</DependentUpon>
     </EmbeddedResource>
@@ -317,6 +320,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\MusteriIslemleri.resx">
       <DependentUpon>MusteriIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\MusteriIslemleriAnaForm.resx">
+      <DependentUpon>MusteriIslemleriAnaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\RaporAlim.resx">
       <DependentUpon>RaporAlim.cs</DependentUpon>
@@ -353,6 +359,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\UrunKarZarar.resx">
       <DependentUpon>UrunKarZarar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\UrunSilmeOnay.resx">
+      <DependentUpon>UrunSilmeOnay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\UrunStokGor.resx">
       <DependentUpon>UrunStokGor.cs</DependentUpon>

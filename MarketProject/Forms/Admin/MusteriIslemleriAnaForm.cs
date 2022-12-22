@@ -7,15 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
 
 namespace MarketProject.Forms.Admin
 {
-    public partial class BorcIslemleri : Form
+    public partial class MusteriIslemleriAnaForm : Form
     {
-        public BorcIslemleri()
+        public MusteriIslemleriAnaForm()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MusteriIslemleri musteriIslem = new MusteriIslemleri();
+            musteriIslem.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

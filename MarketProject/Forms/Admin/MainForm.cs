@@ -50,7 +50,7 @@ namespace MarketProject.Forms.Admin
 
         private void btnMusteri_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new MusteriIslemleri(), sender);
+            OpenChildForm(new MusteriIslemleriAnaForm(), sender);
         }
 
         private void btnTedarikci_Click(object sender, EventArgs e)
@@ -74,11 +74,6 @@ namespace MarketProject.Forms.Admin
         private void btnRapor_Click(object sender, EventArgs e)
         {
             OpenChildForm(new RaporAlim(), sender);
-        }
-
-        private void btnBorc_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new BorcIslemleri(), sender);
         }
 
         private void YoneticiForm_Load(object sender, EventArgs e)

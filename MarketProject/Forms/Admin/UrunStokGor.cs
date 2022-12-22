@@ -35,6 +35,7 @@ namespace MarketProject.Forms.Admin
             textBox4.Text = dataGridView1.Rows[select].Cells[3].Value.ToString();
             textBox5.Text = dataGridView1.Rows[select].Cells[4].Value.ToString();
             textBox6.Text = dataGridView1.Rows[select].Cells[5].Value.ToString();
+            textBox7.Text = dataGridView1.Rows[select].Cells[6].Value.ToString();
 
         }
 
@@ -73,8 +74,13 @@ namespace MarketProject.Forms.Admin
 
         private void button4_Click(object sender, EventArgs e)
         {
-            _productService.Delete(product);
-            LoadData();
+            UrunSilmeOnay urunSil = new UrunSilmeOnay();
+            urunSil.Show();
+
+            /*if (...?){
+                _productService.Delete(product);
+                LoadData();
+            }*/
         }
         private void LoadData()
         {

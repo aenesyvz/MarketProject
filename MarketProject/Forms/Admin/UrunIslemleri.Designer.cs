@@ -39,6 +39,7 @@ namespace MarketProject.Forms.Admin
             // btnStokEkle
             // 
             this.btnStokEkle.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnStokEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStokEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStokEkle.ForeColor = System.Drawing.Color.White;
             this.btnStokEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnStokEkle.Image")));
@@ -55,6 +56,7 @@ namespace MarketProject.Forms.Admin
             // btnStokGor
             // 
             this.btnStokGor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(200)))), ((int)(((byte)(188)))));
+            this.btnStokGor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStokGor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStokGor.ForeColor = System.Drawing.Color.White;
             this.btnStokGor.Image = ((System.Drawing.Image)(resources.GetObject("btnStokGor.Image")));
@@ -71,6 +73,7 @@ namespace MarketProject.Forms.Admin
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(204)))), ((int)(((byte)(51)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));

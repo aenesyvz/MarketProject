@@ -49,6 +49,7 @@ namespace MarketProject.Forms.Admin
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(206, 302);
@@ -93,11 +94,12 @@ namespace MarketProject.Forms.Admin
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(774, 21);
+            this.button4.Location = new System.Drawing.Point(790, 23);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(120, 40);
+            this.button4.Size = new System.Drawing.Size(95, 31);
             this.button4.TabIndex = 6;
             this.button4.Text = "ARA";
             this.button4.UseVisualStyleBackColor = false;
@@ -144,11 +146,12 @@ namespace MarketProject.Forms.Admin
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(900, 21);
+            this.button2.Location = new System.Drawing.Point(904, 22);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 40);
+            this.button2.Size = new System.Drawing.Size(95, 32);
             this.button2.TabIndex = 12;
             this.button2.Text = "TEMİZLE";
             this.button2.UseVisualStyleBackColor = false;
@@ -158,7 +161,7 @@ namespace MarketProject.Forms.Admin
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(463, 29);
+            this.label3.Location = new System.Drawing.Point(463, 26);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 24);
             this.label3.TabIndex = 11;
@@ -167,7 +170,7 @@ namespace MarketProject.Forms.Admin
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(589, 30);
+            this.textBox3.Location = new System.Drawing.Point(589, 26);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(179, 24);
             this.textBox3.TabIndex = 10;
