@@ -58,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\Abstract\IAdminService.cs" />
+    <Compile Include="Business\Abstract\IAuthService.cs" />
+    <Compile Include="Business\Abstract\ICreditSaleService.cs" />
     <Compile Include="Business\Abstract\ICustomerService.cs" />
     <Compile Include="Business\Abstract\IDebtCustomerService.cs" />
     <Compile Include="Business\Abstract\IDebtSupplierService.cs" />
@@ -257,6 +259,12 @@
     <Compile Include="Forms\Admin\UrunStokGor.Designer.cs">
       <DependentUpon>UrunStokGor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\LoginScreen\LoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginScreen\LoginScreen.Designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202212191015237_init.cs" />
     <Compile Include="Migrations\202212191015237_init.designer.cs">
       <DependentUpon>202212191015237_init.cs</DependentUpon>
@@ -348,6 +356,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\UrunStokGor.resx">
       <DependentUpon>UrunStokGor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginScreen\LoginScreen.resx">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212191015237_init.resx">
       <DependentUpon>202212191015237_init.cs</DependentUpon>

@@ -43,7 +43,7 @@ namespace MarketProject.Forms.Admin
             if (response.Success)
             {
                 LoadData();
-                MessageBox.Show("Müşteri Eklendi", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Müşteri Eklendi", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

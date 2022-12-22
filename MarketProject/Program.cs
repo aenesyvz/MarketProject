@@ -1,10 +1,11 @@
-﻿using System;
+﻿using MarketProject.Forms.Admin;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MarketProject.Forms.Admin
+namespace MarketProject.Forms.LoginScreen
 {
     internal static class Program
     {

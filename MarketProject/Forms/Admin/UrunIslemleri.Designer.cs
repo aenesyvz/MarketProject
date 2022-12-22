@@ -33,149 +33,63 @@ namespace MarketProject.Forms.Admin
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UrunIslemleri));
             this.btnStokEkle = new System.Windows.Forms.Button();
             this.btnStokGor = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // btnStokEkle
             // 
-            this.btnStokEkle.BackColor = System.Drawing.Color.Tomato;
-            this.btnStokEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.btnStokEkle.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnStokEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStokEkle.ForeColor = System.Drawing.Color.White;
-            this.btnStokEkle.Location = new System.Drawing.Point(460, 125);
+            this.btnStokEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnStokEkle.Image")));
+            this.btnStokEkle.Location = new System.Drawing.Point(60, 269);
             this.btnStokEkle.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnStokEkle.Name = "btnStokEkle";
-            this.btnStokEkle.Size = new System.Drawing.Size(159, 39);
+            this.btnStokEkle.Size = new System.Drawing.Size(275, 190);
             this.btnStokEkle.TabIndex = 1;
-            this.btnStokEkle.Text = "STOK EKLE";
+            this.btnStokEkle.Text = "\r\nStok ekleme işlemleri için tıklayınız";
+            this.btnStokEkle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnStokEkle.UseVisualStyleBackColor = false;
             this.btnStokEkle.Click += new System.EventHandler(this.btnStokEkle_Click);
             // 
             // btnStokGor
             // 
-            this.btnStokGor.BackColor = System.Drawing.Color.Tomato;
-            this.btnStokGor.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.btnStokGor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(200)))), ((int)(((byte)(188)))));
+            this.btnStokGor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStokGor.ForeColor = System.Drawing.Color.White;
-            this.btnStokGor.Location = new System.Drawing.Point(460, 315);
+            this.btnStokGor.Image = ((System.Drawing.Image)(resources.GetObject("btnStokGor.Image")));
+            this.btnStokGor.Location = new System.Drawing.Point(406, 269);
             this.btnStokGor.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnStokGor.Name = "btnStokGor";
-            this.btnStokGor.Size = new System.Drawing.Size(159, 39);
+            this.btnStokGor.Size = new System.Drawing.Size(275, 190);
             this.btnStokGor.TabIndex = 2;
-            this.btnStokGor.Text = "STOK GÖR";
+            this.btnStokGor.Text = "\r\nStok görüntüleme işlemlerine gitmek için tıklayınız";
+            this.btnStokGor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnStokGor.UseVisualStyleBackColor = false;
             this.btnStokGor.Click += new System.EventHandler(this.btnStokGor_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label1.Location = new System.Drawing.Point(381, 90);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(298, 18);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Stok ekleme işlemlerine gitmek için tıklayınız";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label2.Location = new System.Drawing.Point(363, 278);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(332, 18);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Stok görüntüleme işlemlerine gitmek için tıklayınız";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(323, 82);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(305, 271);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(741, 82);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(765, 271);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 14;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Navy;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 90);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(257, 245);
-            this.pictureBox3.TabIndex = 15;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(366, 423);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(204)))), ((int)(((byte)(51)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(752, 269);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(224, 55);
+            this.button1.Size = new System.Drawing.Size(275, 190);
             this.button1.TabIndex = 16;
-            this.button1.Text = "Stok Sayısı Azalan Ürünler";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "\r\nStok sayısı azalan ürünleri görüntülemek için tıklayınız";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // UrunIslemleri
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(994, 534);
+            this.ClientSize = new System.Drawing.Size(1067, 520);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnStokGor);
             this.Controls.Add(this.btnStokEkle);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
@@ -183,26 +97,13 @@ namespace MarketProject.Forms.Admin
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "UrunIslemleri";
             this.Text = "Ürün İşlemleri";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private Button btnStokEkle;
         private Button btnStokGor;
-        private Label label1;
-        private Label label2;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox3;
         private Button button1;
     }
 }

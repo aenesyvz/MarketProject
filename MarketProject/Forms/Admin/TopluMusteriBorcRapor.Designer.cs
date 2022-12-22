@@ -38,20 +38,22 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Sans Serif Collection", 6.749999F);
-            this.label3.Location = new System.Drawing.Point(12, 23);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 39);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 23);
+            this.label3.Size = new System.Drawing.Size(145, 24);
             this.label3.TabIndex = 12;
             this.label3.Text = "Rapor Formatı =";
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Tomato;
+            this.button3.BackColor = System.Drawing.Color.Purple;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(281, 17);
+            this.button3.Location = new System.Drawing.Point(344, 34);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 32);
+            this.button3.Size = new System.Drawing.Size(88, 37);
             this.button3.TabIndex = 11;
             this.button3.Text = "EXCEL";
             this.button3.UseVisualStyleBackColor = false;
@@ -59,11 +61,13 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Tomato;
+            this.button2.BackColor = System.Drawing.Color.Purple;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(197, 17);
+            this.button2.Location = new System.Drawing.Point(260, 34);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 32);
+            this.button2.Size = new System.Drawing.Size(78, 37);
             this.button2.TabIndex = 10;
             this.button2.Text = "WORD";
             this.button2.UseVisualStyleBackColor = false;
@@ -71,11 +75,13 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Tomato;
+            this.button1.BackColor = System.Drawing.Color.Purple;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(121, 17);
+            this.button1.Location = new System.Drawing.Point(183, 34);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 32);
+            this.button1.Size = new System.Drawing.Size(71, 37);
             this.button1.TabIndex = 9;
             this.button1.Text = "PDF";
             this.button1.UseVisualStyleBackColor = false;
@@ -83,18 +89,18 @@
             // 
             // TopluMusteriBorcRapor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(995, 569);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(198)))), ((int)(((byte)(236)))));
+            this.ClientSize = new System.Drawing.Size(446, 104);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Font = new System.Drawing.Font("Sans Serif Collection", 8.25F);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "TopluMusteriBorcRapor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
