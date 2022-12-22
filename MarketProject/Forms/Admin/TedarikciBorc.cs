@@ -47,12 +47,12 @@ namespace MarketProject.Forms.Admin
             supplierId = id;
 
             supplierTotalDebtDto = _debtSupplierService.GetSupplierTotalDebtBySupplierId(id).Data;
-            label1.Text = dataGridView1.Rows[select].Cells[1].Value.ToString();
-            label8.Text = dataGridView1.Rows[select].Cells[2].Value.ToString();
-            label9.Text = dataGridView1.Rows[select].Cells[3].Value.ToString();
-            label10.Text = dataGridView1.Rows[select].Cells[4].Value.ToString();
-            label11.Text = dataGridView1.Rows[select].Cells[5].Value.ToString();
-            label12.Text = dataGridView1.Rows[select].Cells[6].Value.ToString(); 
+            textBox1.Text = dataGridView1.Rows[select].Cells[1].Value.ToString();
+            textBox2.Text = dataGridView1.Rows[select].Cells[2].Value.ToString();
+            textBox3.Text = dataGridView1.Rows[select].Cells[3].Value.ToString();
+            textBox4.Text = dataGridView1.Rows[select].Cells[4].Value.ToString();
+            textBox5.Text = dataGridView1.Rows[select].Cells[5].Value.ToString();
+            textBox6.Text = dataGridView1.Rows[select].Cells[6].Value.ToString(); 
         }
 
         private void button2_Click(object sender, EventArgs e)

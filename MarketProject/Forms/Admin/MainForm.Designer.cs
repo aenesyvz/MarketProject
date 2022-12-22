@@ -33,7 +33,6 @@ namespace MarketProject.Forms.Admin
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelLeft = new System.Windows.Forms.Panel();
-            this.btnBorc = new System.Windows.Forms.Button();
             this.btnRapor = new System.Windows.Forms.Button();
             this.btnTedarikci = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -57,6 +56,9 @@ namespace MarketProject.Forms.Admin
             this.label1 = new System.Windows.Forms.Label();
             this.labelHosgeldiniz = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panelLeft.SuspendLayout();
             this.panelTopLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -68,12 +70,14 @@ namespace MarketProject.Forms.Admin
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelLeft.Controls.Add(this.btnBorc);
+            this.panelLeft.Controls.Add(this.label3);
+            this.panelLeft.Controls.Add(this.label2);
             this.panelLeft.Controls.Add(this.btnRapor);
             this.panelLeft.Controls.Add(this.btnTedarikci);
             this.panelLeft.Controls.Add(this.btnExit);
@@ -88,30 +92,12 @@ namespace MarketProject.Forms.Admin
             this.panelLeft.Size = new System.Drawing.Size(287, 911);
             this.panelLeft.TabIndex = 0;
             // 
-            // btnBorc
-            // 
-            this.btnBorc.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnBorc.FlatAppearance.BorderSize = 0;
-            this.btnBorc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorc.Font = new System.Drawing.Font("Sans Serif Collection", 8.25F);
-            this.btnBorc.ForeColor = System.Drawing.Color.White;
-            this.btnBorc.Image = ((System.Drawing.Image)(resources.GetObject("btnBorc.Image")));
-            this.btnBorc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBorc.Location = new System.Drawing.Point(0, 612);
-            this.btnBorc.Name = "btnBorc";
-            this.btnBorc.Size = new System.Drawing.Size(287, 100);
-            this.btnBorc.TabIndex = 8;
-            this.btnBorc.Text = "  Borç İşlemleri";
-            this.btnBorc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBorc.UseVisualStyleBackColor = true;
-            this.btnBorc.Click += new System.EventHandler(this.btnBorc_Click);
-            // 
             // btnRapor
             // 
             this.btnRapor.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnRapor.FlatAppearance.BorderSize = 0;
             this.btnRapor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRapor.Font = new System.Drawing.Font("Sans Serif Collection", 8.25F);
+            this.btnRapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRapor.ForeColor = System.Drawing.Color.White;
             this.btnRapor.Image = ((System.Drawing.Image)(resources.GetObject("btnRapor.Image")));
             this.btnRapor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -129,7 +115,7 @@ namespace MarketProject.Forms.Admin
             this.btnTedarikci.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnTedarikci.FlatAppearance.BorderSize = 0;
             this.btnTedarikci.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTedarikci.Font = new System.Drawing.Font("Sans Serif Collection", 8.25F);
+            this.btnTedarikci.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTedarikci.ForeColor = System.Drawing.Color.White;
             this.btnTedarikci.Image = ((System.Drawing.Image)(resources.GetObject("btnTedarikci.Image")));
             this.btnTedarikci.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -149,7 +135,7 @@ namespace MarketProject.Forms.Admin
             this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Sans Serif Collection", 8.25F);
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -167,7 +153,7 @@ namespace MarketProject.Forms.Admin
             this.btnMusteri.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnMusteri.FlatAppearance.BorderSize = 0;
             this.btnMusteri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMusteri.Font = new System.Drawing.Font("Sans Serif Collection", 8.25F);
+            this.btnMusteri.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMusteri.ForeColor = System.Drawing.Color.White;
             this.btnMusteri.Image = ((System.Drawing.Image)(resources.GetObject("btnMusteri.Image")));
             this.btnMusteri.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -185,7 +171,7 @@ namespace MarketProject.Forms.Admin
             this.btnUrunStok.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnUrunStok.FlatAppearance.BorderSize = 0;
             this.btnUrunStok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUrunStok.Font = new System.Drawing.Font("Sans Serif Collection", 8.25F);
+            this.btnUrunStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUrunStok.ForeColor = System.Drawing.Color.White;
             this.btnUrunStok.Image = ((System.Drawing.Image)(resources.GetObject("btnUrunStok.Image")));
             this.btnUrunStok.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -203,7 +189,7 @@ namespace MarketProject.Forms.Admin
             this.btnMarketSatis.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnMarketSatis.FlatAppearance.BorderSize = 0;
             this.btnMarketSatis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMarketSatis.Font = new System.Drawing.Font("Sans Serif Collection", 8.25F);
+            this.btnMarketSatis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMarketSatis.ForeColor = System.Drawing.Color.White;
             this.btnMarketSatis.Image = ((System.Drawing.Image)(resources.GetObject("btnMarketSatis.Image")));
             this.btnMarketSatis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -218,7 +204,7 @@ namespace MarketProject.Forms.Admin
             // 
             // panelTopLeft
             // 
-            this.panelTopLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panelTopLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
             this.panelTopLeft.Controls.Add(this.pictureBox4);
             this.panelTopLeft.Controls.Add(this.pictureBox3);
             this.panelTopLeft.Controls.Add(this.btnHome);
@@ -251,10 +237,10 @@ namespace MarketProject.Forms.Admin
             // 
             // btnHome
             // 
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Sans Serif Collection", 8.25F);
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -269,7 +255,7 @@ namespace MarketProject.Forms.Admin
             // 
             // panelTopMid
             // 
-            this.panelTopMid.BackColor = System.Drawing.Color.Tomato;
+            this.panelTopMid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(122)))));
             this.panelTopMid.Controls.Add(this.pictureBox6);
             this.panelTopMid.Controls.Add(this.pictureBox7);
             this.panelTopMid.Controls.Add(this.labelBaslik);
@@ -316,27 +302,28 @@ namespace MarketProject.Forms.Admin
             // labelTarih
             // 
             this.labelTarih.AutoSize = true;
-            this.labelTarih.Font = new System.Drawing.Font("Sans Serif Collection", 8.25F);
+            this.labelTarih.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTarih.ForeColor = System.Drawing.Color.White;
             this.labelTarih.Location = new System.Drawing.Point(869, 65);
             this.labelTarih.Name = "labelTarih";
-            this.labelTarih.Size = new System.Drawing.Size(54, 27);
+            this.labelTarih.Size = new System.Drawing.Size(53, 24);
             this.labelTarih.TabIndex = 8;
             this.labelTarih.Text = "Tarih";
             // 
             // labelSaat
             // 
             this.labelSaat.AutoSize = true;
-            this.labelSaat.Font = new System.Drawing.Font("Sans Serif Collection", 8.25F);
+            this.labelSaat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSaat.ForeColor = System.Drawing.Color.White;
             this.labelSaat.Location = new System.Drawing.Point(39, 60);
             this.labelSaat.Name = "labelSaat";
-            this.labelSaat.Size = new System.Drawing.Size(49, 27);
+            this.labelSaat.Size = new System.Drawing.Size(46, 24);
             this.labelSaat.TabIndex = 9;
             this.labelSaat.Text = "Saat";
             // 
             // panelBeyaz
             // 
+            this.panelBeyaz.Controls.Add(this.pictureBox8);
             this.panelBeyaz.Controls.Add(this.pictureBox5);
             this.panelBeyaz.Controls.Add(this.pictureBox2);
             this.panelBeyaz.Controls.Add(this.pictureBox1);
@@ -363,7 +350,7 @@ namespace MarketProject.Forms.Admin
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(769, 410);
+            this.pictureBox2.Location = new System.Drawing.Point(787, 410);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -383,28 +370,59 @@ namespace MarketProject.Forms.Admin
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sans Serif Collection", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.Tomato;
-            this.label1.Location = new System.Drawing.Point(394, 315);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(122)))));
+            this.label1.Location = new System.Drawing.Point(394, 322);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(317, 52);
+            this.label1.Size = new System.Drawing.Size(309, 42);
             this.label1.TabIndex = 4;
-            this.label1.Text = "GÜNEŞ MARKET";
+            this.label1.Text = "ÇİÇEK MARKET";
             // 
             // labelHosgeldiniz
             // 
             this.labelHosgeldiniz.AutoSize = true;
-            this.labelHosgeldiniz.Font = new System.Drawing.Font("Sans Serif Collection", 12F, System.Drawing.FontStyle.Bold);
+            this.labelHosgeldiniz.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHosgeldiniz.Location = new System.Drawing.Point(342, 421);
             this.labelHosgeldiniz.Name = "labelHosgeldiniz";
-            this.labelHosgeldiniz.Size = new System.Drawing.Size(421, 39);
+            this.labelHosgeldiniz.Size = new System.Drawing.Size(417, 31);
             this.labelHosgeldiniz.TabIndex = 0;
-            this.labelHosgeldiniz.Text = "Market sistemine hoşgeldiniz... :)";
+            this.labelHosgeldiniz.Text = "Market sistemine hoşgeldiniz...";
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(12, 719);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(252, 24);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Şu an sistemdeki yönetici:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(13, 756);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(152, 18);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "yonetici_ismi_soyismi";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(751, 421);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox8.TabIndex = 8;
+            this.pictureBox8.TabStop = false;
             // 
             // MainForm
             // 
@@ -423,9 +441,10 @@ namespace MarketProject.Forms.Admin
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GÜNEŞ MARKET";
+            this.Text = "ÇİÇEK MARKET";
             this.Load += new System.EventHandler(this.YoneticiForm_Load);
             this.panelLeft.ResumeLayout(false);
+            this.panelLeft.PerformLayout();
             this.panelTopLeft.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -438,6 +457,7 @@ namespace MarketProject.Forms.Admin
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -461,7 +481,6 @@ namespace MarketProject.Forms.Admin
         private Label label1;
         private Label labelHosgeldiniz;
         private Button btnTedarikci;
-        private Button btnBorc;
         private Button btnRapor;
         private PictureBox pictureBox5;
         private Label labelSaat;
@@ -469,5 +488,8 @@ namespace MarketProject.Forms.Admin
         private System.Windows.Forms.Timer timer1;
         private PictureBox pictureBox7;
         private PictureBox pictureBox6;
+        private Label label3;
+        private Label label2;
+        private PictureBox pictureBox8;
     }
 }

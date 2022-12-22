@@ -58,7 +58,7 @@ namespace MarketProject.Forms.Admin
             int select = dataGridView1.SelectedCells[0].RowIndex;
             int id = Int32.Parse(dataGridView1.Rows[select].Cells[0].Value.ToString());
             debtCustomer = _debtCustomerService.GetById(id).Data;
-            label8.Text = dataGridView1.Rows[select].Cells[2].Value.ToString();
+            textBox1.Text = dataGridView1.Rows[select].Cells[2].Value.ToString();
             textBox5.Text = dataGridView1.Rows[select].Cells[3].Value.ToString();
             textBox6.Text = dataGridView1.Rows[select].Cells[4].Value.ToString();
             textBox7.Text = dataGridView1.Rows[select].Cells[5].Value.ToString();

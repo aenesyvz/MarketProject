@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MarketProject.Business.Concrete
 {
@@ -39,6 +40,16 @@ namespace MarketProject.Business.Concrete
         {
             _managerDal.Update(manager);
             return new SuccessResult();
+        }
+    }
+
+    public class AuthManager : IAuthService
+    {
+        private readonly IAdminService _adminService = new AdminManager();
+
+        public IDataResult<Admin> Login(Admin admin)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

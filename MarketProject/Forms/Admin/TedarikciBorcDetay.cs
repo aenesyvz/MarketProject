@@ -45,9 +45,9 @@ namespace MarketProject.Forms.Admin
                 };
                 _debtSupplierService.Update(updatedDebtSupplier);
                 LoadData();
-                label12.Text ="";
-                label13.Text = "";
-                label14.Text = "";
+                textBox5.Text ="";
+                textBox6.Text = "";
+                textBox7.Text = "";
             }
             else
             {
@@ -67,10 +67,10 @@ namespace MarketProject.Forms.Admin
 
 
             debtSupplier = _debtSupplierService.GetById(id).Data;
-            label11.Text = dataGridView1.Rows[select].Cells[2].Value.ToString();
-            label12.Text = dataGridView1.Rows[select].Cells[3].Value.ToString();
-            label13.Text = dataGridView1.Rows[select].Cells[4].Value.ToString();
-            label14.Text = dataGridView1.Rows[select].Cells[5].Value.ToString();
+            textBox5.Text = dataGridView1.Rows[select].Cells[2].Value.ToString();
+            textBox6.Text = dataGridView1.Rows[select].Cells[3].Value.ToString();
+            textBox7.Text = dataGridView1.Rows[select].Cells[4].Value.ToString();
+            textBox8.Text = dataGridView1.Rows[select].Cells[5].Value.ToString();
          
 
         }
@@ -81,9 +81,12 @@ namespace MarketProject.Forms.Admin
             if (responseSupplier.Success && responseDebtSupplier.Success)
             {
                 supplier = responseSupplier.Data;
-                label15.Text = supplier.FirstName;
-                label16.Text = supplier.LastName;
-                label17.Text = supplier.PhoneNumber;
+                textBox2.Text = supplier.FirstName;
+                //label15.Text = supplier.FirstName;
+                textBox3.Text = supplier.LastName;
+                //label16.Text = supplier.FirstName;
+                textBox4.Text = supplier.PhoneNumber;
+                //label17.Text = supplier.PhoneNumber;
 
                 debtSuppliers = responseDebtSupplier.Data;
                 dataGridView1.DataSource = debtSuppliers;

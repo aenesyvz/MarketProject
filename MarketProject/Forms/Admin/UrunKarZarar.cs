@@ -19,7 +19,7 @@ namespace MarketProject.Forms.Admin
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // pdf raporu hazırlasın
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -30,6 +30,11 @@ namespace MarketProject.Forms.Admin
         private void button3_Click(object sender, EventArgs e)
         {
             // excel raporu hazırlasın
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            // pdf raporu hazırlasın
         }
     }
 }
