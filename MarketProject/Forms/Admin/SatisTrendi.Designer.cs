@@ -131,7 +131,7 @@ namespace MarketProject.Forms.Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(222)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1001, 589);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.chart1);

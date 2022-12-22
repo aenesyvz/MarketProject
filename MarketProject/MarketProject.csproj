@@ -122,12 +122,6 @@
     <Compile Include="Entities\Dtos\SaleProductDto.cs" />
     <Compile Include="Entities\Dtos\SupplierTotalDebtDto.cs" />
     <Compile Include="Entities\Dtos\UserForLoginDto.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Admin\EnCokSatanUrunler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -295,9 +289,6 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\EnCokSatanUrunler.resx">
       <DependentUpon>EnCokSatanUrunler.cs</DependentUpon>
     </EmbeddedResource>
