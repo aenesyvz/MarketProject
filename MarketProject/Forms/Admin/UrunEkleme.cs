@@ -74,7 +74,7 @@ namespace MarketProject.Forms.Admin
                             Code = waybill.ProductCode,
                             BarcodeNo = "855" + waybill.ProductCode + "555",
                             Amount = waybill.Amount,
-                            UnitOfPrice =Convert.ToDecimal(change * _kar / 10),
+                            UnitOfPrice =Convert.ToDecimal(change * _kar / 100),
                             WayBillId = waybill.WaybillId,
                         };
                         _productService.Add(createdProduct);
@@ -83,7 +83,7 @@ namespace MarketProject.Forms.Admin
                     {
                         product.Name = waybill.ProductName;      
                         product.Amount += waybill.Amount;
-                        product.UnitOfPrice = Convert.ToDecimal(waybill.Price * _kar / 10);
+                        product.UnitOfPrice = Convert.ToDecimal(waybill.Price * _kar / 100);
                         _productService.Update(product);
                     }
 
@@ -160,11 +160,9 @@ namespace MarketProject.Forms.Admin
 
         private void button4_Click(object sender, EventArgs e)
         {
-            var response = _supplierService.GetByPhoneNumberLike(textBox3.Text);
-            if (response.Success)
-            {
-                dataGridView1.DataSource = response.Data;
-            }
+            var response = suppliers.Where(x => x.PhoneNumber == textBox3.Text).ToList();
+            dataGridView1.DataSource = response;
+        
         }
 
         private void button2_Click(object sender, EventArgs e)

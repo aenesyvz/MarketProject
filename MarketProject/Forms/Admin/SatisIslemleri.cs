@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -92,7 +93,7 @@ namespace MarketProject.Forms.Admin
                     if (product.Amount >= amaount)
                     {
                         string barcode = product.BarcodeNo;
-                        //               0         1       2         3        4                   5                6
+                        //               0         1       2         3             4               5        6             7
                         string temp = barcode + " => " + amaount + " X " + product.UnitOfPrice + " = " + amaount * product.UnitOfPrice;
                         totalPrice += product.UnitOfPrice * amaount;
                         listBox1.Items.Add(temp);
@@ -148,7 +149,21 @@ namespace MarketProject.Forms.Admin
 
         private void button6_Click(object sender, EventArgs e)
         {
-            //
+            string selectedItem = listBox1.SelectedItem.ToString();
+            string[] items = selectedItem.Split(' ');
+            string selectedBarcode = items[0];
+            int selectedAmount = Convert.ToInt32(items[2]);
+            var selectedProduct = _productService.GetByBarcode(selectedBarcode).Data;
+
+            UrunSilmeOnay urunSilmeOnay = new UrunSilmeOnay();
+            if(urunSilmeOnay.ShowDialog() == DialogResult.OK)
+            {
+                totalPrice -= Convert.ToDecimal(Convert.ToDouble(selectedProduct.UnitOfPrice) * selectedAmount);
+                textBox4.Text = totalPrice.ToString();
+                listBox1.Items.Remove(listBox1.SelectedItem);
+            }
+            //MessageBox.Show("AFERİN", "aDAMMM", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -156,7 +171,6 @@ namespace MarketProject.Forms.Admin
 
             if (customer != null)
             {
-
                 DebtCustomer debtCustomer = new DebtCustomer();
                 debtCustomer.CustomerId = customer.Id;
                 debtCustomer.AddedDate = DateTime.Now;
@@ -214,10 +228,15 @@ namespace MarketProject.Forms.Admin
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var response = _customerService.GetByPhoneNumber(textBox1.Text);
-            if (response.Success)
+            var searchCustomer = _customerService.GetByPhoneNumber(textBox1.Text.ToString());
+            var response = customers.Where(x => x.PhoneNumber == textBox1.Text).ToList();
+            if (response != null)
             {
-                dataGridView1.DataSource = response.Data;
+                dataGridView1.DataSource = response;
+            }
+            else
+            {
+                MessageBox.Show("Uyarı", "Girdiğiniz telefon numarasına ait bir müşteri bulunamadı!");
             }
         }
     }

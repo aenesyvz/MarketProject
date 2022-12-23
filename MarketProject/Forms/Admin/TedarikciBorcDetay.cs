@@ -34,6 +34,11 @@ namespace MarketProject.Forms.Admin
         private void button1_Click(object sender, EventArgs e)
         {
             if(textBox1.Text != null){
+                if(Convert.ToInt32(textBox1.Text) > debtSupplier.RemaingDebt)
+                {
+                    MessageBox.Show("Uyarı", "Ödeyeceğiniz tutar kalan borçtan büyük olduğundan işlem gerçekleştirilmeyek!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
                 DebtSupplier updatedDebtSupplier = new DebtSupplier()
                 {
                     Id = debtSupplier.Id,

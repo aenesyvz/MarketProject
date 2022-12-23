@@ -75,16 +75,12 @@ namespace MarketProject.Forms.LoginScreen
             var response = _authService.Login(userForLoginDto);
             if (response.Success)
             {
-                MainForm mainForm = new MainForm();
-                mainForm.IsMdiContainer = true;
-                //mainForm.MdiParent = this;
-                mainForm.Show();
-
-                /*LoginScreen login = new LoginScreen();
-                login.Close();*/
-
                 textBox1.Text = "";
                 textBox4.Text = "";
+                this.DialogResult= DialogResult.OK;
+               this.Close();
+
+               
             }
             else
             {

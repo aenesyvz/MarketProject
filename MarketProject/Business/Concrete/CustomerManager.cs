@@ -35,7 +35,7 @@ namespace MarketProject.Business.Concrete
 
         public IDataResult<Customer> GetByPhoneNumber(string phoneNumber)
         {
-            return new SuccessDataResult<Customer>(_customerDal.GetList().Where(x => x.PhoneNumber == phoneNumber).FirstOrDefault());
+            return new SuccessDataResult<Customer>(_customerDal.Get(x => x.PhoneNumber == phoneNumber));
         }
 
         public IDataResult<List<Customer>> GetList()

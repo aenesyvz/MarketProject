@@ -73,9 +73,14 @@ namespace MarketProject.Forms.Admin
             var response = _authService.Login(userForLoginDto);
             if (response.Success)
             {
-                userToCheck = true;
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
-            userToCheck = false;
+            else
+            {
+                MessageBox.Show("Hata", "Kimsin lenn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
     }
 }

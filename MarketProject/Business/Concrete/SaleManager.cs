@@ -67,7 +67,7 @@ namespace MarketProject.Business.Concrete
         {
             List<SaleTrendByDateDto> saleTrendByDateDtos = _saleDal.GetList().Where(x => x.AddedDate.Day >= start.Day && x.AddedDate.Day <= finish.Day).GroupBy(l => l.AddedDate.Day).Select(c => new SaleTrendByDateDto
             {
-                SaleDate = c.First().AddedDate,
+                SaleDate = c.First().AddedDate.Date,
                 Sum = c.Sum(p => p.Amount)
             }).ToList() ;
           
