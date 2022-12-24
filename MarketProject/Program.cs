@@ -18,7 +18,11 @@ namespace MarketProject.Forms.LoginScreen
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginScreen());
+            LoginScreen loginScreen = new LoginScreen();
+            if(loginScreen.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new MainForm());
+            }
         }
     }
 }

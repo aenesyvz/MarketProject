@@ -33,7 +33,6 @@ namespace MarketProject.Forms.Admin
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelLeft = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnRapor = new System.Windows.Forms.Button();
             this.btnTedarikci = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -76,7 +75,6 @@ namespace MarketProject.Forms.Admin
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelLeft.Controls.Add(this.label3);
             this.panelLeft.Controls.Add(this.btnRapor);
             this.panelLeft.Controls.Add(this.btnTedarikci);
             this.panelLeft.Controls.Add(this.btnExit);
@@ -90,17 +88,6 @@ namespace MarketProject.Forms.Admin
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(286, 911);
             this.panelLeft.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(24, 712);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 18);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "yonetici_ismi_soyismi";
             // 
             // btnRapor
             // 
@@ -270,7 +257,7 @@ namespace MarketProject.Forms.Admin
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(-275, 608);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(252, 24);
+            this.label2.Size = new System.Drawing.Size(316, 29);
             this.label2.TabIndex = 8;
             this.label2.Text = "Şu an sistemdeki yönetici:";
             // 
@@ -316,7 +303,7 @@ namespace MarketProject.Forms.Admin
             this.labelBaslik.ForeColor = System.Drawing.Color.White;
             this.labelBaslik.Location = new System.Drawing.Point(363, 25);
             this.labelBaslik.Name = "labelBaslik";
-            this.labelBaslik.Size = new System.Drawing.Size(302, 55);
+            this.labelBaslik.Size = new System.Drawing.Size(375, 69);
             this.labelBaslik.TabIndex = 0;
             this.labelBaslik.Text = "ANA SAYFA";
             // 
@@ -327,7 +314,7 @@ namespace MarketProject.Forms.Admin
             this.labelTarih.ForeColor = System.Drawing.Color.White;
             this.labelTarih.Location = new System.Drawing.Point(869, 65);
             this.labelTarih.Name = "labelTarih";
-            this.labelTarih.Size = new System.Drawing.Size(53, 24);
+            this.labelTarih.Size = new System.Drawing.Size(69, 29);
             this.labelTarih.TabIndex = 8;
             this.labelTarih.Text = "Tarih";
             // 
@@ -338,7 +325,7 @@ namespace MarketProject.Forms.Admin
             this.labelSaat.ForeColor = System.Drawing.Color.White;
             this.labelSaat.Location = new System.Drawing.Point(39, 60);
             this.labelSaat.Name = "labelSaat";
-            this.labelSaat.Size = new System.Drawing.Size(46, 24);
+            this.labelSaat.Size = new System.Drawing.Size(61, 29);
             this.labelSaat.TabIndex = 9;
             this.labelSaat.Text = "Saat";
             // 
@@ -405,7 +392,7 @@ namespace MarketProject.Forms.Admin
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(122)))));
             this.label1.Location = new System.Drawing.Point(394, 322);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(309, 42);
+            this.label1.Size = new System.Drawing.Size(385, 54);
             this.label1.TabIndex = 4;
             this.label1.Text = "ÇİÇEK MARKET";
             // 
@@ -415,7 +402,7 @@ namespace MarketProject.Forms.Admin
             this.labelHosgeldiniz.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHosgeldiniz.Location = new System.Drawing.Point(342, 421);
             this.labelHosgeldiniz.Name = "labelHosgeldiniz";
-            this.labelHosgeldiniz.Size = new System.Drawing.Size(417, 31);
+            this.labelHosgeldiniz.Size = new System.Drawing.Size(512, 39);
             this.labelHosgeldiniz.TabIndex = 0;
             this.labelHosgeldiniz.Text = "Market sistemine hoşgeldiniz...";
             // 
@@ -426,7 +413,7 @@ namespace MarketProject.Forms.Admin
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
@@ -444,7 +431,6 @@ namespace MarketProject.Forms.Admin
             this.Text = "ÇİÇEK MARKET";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panelLeft.ResumeLayout(false);
-            this.panelLeft.PerformLayout();
             this.panelTopLeft.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -488,7 +474,6 @@ namespace MarketProject.Forms.Admin
         private System.Windows.Forms.Timer timer1;
         private PictureBox pictureBox7;
         private PictureBox pictureBox6;
-        private Label label3;
         private Label label2;
         private PictureBox pictureBox8;
     }

@@ -120,6 +120,7 @@
     <Compile Include="Entities\Dtos\CreditSaleDto.cs" />
     <Compile Include="Entities\Dtos\CustomerTotalDebtDto.cs" />
     <Compile Include="Entities\Dtos\SaleProductDto.cs" />
+    <Compile Include="Entities\Dtos\SaleTrendByDateDto.cs" />
     <Compile Include="Entities\Dtos\SupplierTotalDebtDto.cs" />
     <Compile Include="Entities\Dtos\UserForLoginDto.cs" />
     <Compile Include="Forms\Admin\EnCokSatanUrunler.cs">

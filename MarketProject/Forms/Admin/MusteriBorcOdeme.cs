@@ -83,43 +83,46 @@ namespace MarketProject.Forms.Admin
         {
             UrunSilmeOnay urunSilmeOnay = new UrunSilmeOnay();
             urunSilmeOnay.ShowDialog();
-            urunSilmeOnay.Show();
-            if (!urunSilmeOnay.userToCheck)
+   
+            if(urunSilmeOnay.ShowDialog() != DialogResult.OK)
             {
-                MessageBox.Show("Hatalı", "Tekrar deneyiniz");
+                MessageBox.Show("Dikkat", "Kendinizi onaylamadığınız için satış silinmeyecektir");
+                return;
             }
-            MessageBox.Show("Adaam", "Helake");
-            // DebtCustomer updatedDebtCustomer = new DebtCustomer()
-            // {
-            //     Id = _debCustomerId,
-            //     AddedDate = debtCustomer.AddedDate,
-            //     CustomerId = debtCustomer.CustomerId,
-            //     AmountPaid = debtCustomer.AmountPaid >= Convert.ToDecimal(textBox8.Text.ToString()) ? debtCustomer.AmountPaid - Convert.ToDecimal(textBox8.Text.ToString()) :0,
-            //     AmountOfDebt = debtCustomer.AmountOfDebt >= Convert.ToDecimal(textBox8.Text.ToString()) ? debtCustomer.AmountOfDebt - Convert.ToDecimal(textBox8.Text.ToString()):0,
-            //     RemaingDebt = debtCustomer.RemaingDebt >= Convert.ToDecimal(textBox8.Text.ToString()) ? debtCustomer.RemaingDebt - Convert.ToDecimal(textBox8.Text.ToString()) : 0
-            // };
-            // _debtCustomerService.Update(updatedDebtCustomer);
-            // Product updatedUpdated = new Product()
-            // {
-            //     Id = product.Id,
-            //     BarcodeNo = product.BarcodeNo,
-            //     Amount = product.Amount + Convert.ToInt32(textBox9.Text),
-            //     Code = product.Code,
-            //     Name = product.Name,
-            //     UnitOfPrice = product.UnitOfPrice,
-            //     WayBillId = product.WayBillId
-            // };
-            // _productService.Update(updatedUpdated);
-            //// int saledId = selectedSale;
-            // var sale = _saleService.GetById(selectedSale);
-            // if (sale == null)
-            // {
-            //     MessageBox.Show("Hata", "Satış bulunamadı");
-            //     return;
-            // }
-            // _saleService.Delete(sale.Data);
-            // var  creditSale = _creditSaleService.GetById(selectedSale);
-            // _creditSaleService.Delete(creditSale.Data);
+
+            DebtCustomer updatedDebtCustomer = new DebtCustomer()
+            {
+                Id = _debCustomerId,
+                AddedDate = debtCustomer.AddedDate,
+                CustomerId = debtCustomer.CustomerId,
+                AmountPaid = debtCustomer.AmountPaid >= Convert.ToDecimal(textBox8.Text.ToString()) ? debtCustomer.AmountPaid - Convert.ToDecimal(textBox8.Text.ToString()) : 0,
+                AmountOfDebt = debtCustomer.AmountOfDebt >= Convert.ToDecimal(textBox8.Text.ToString()) ? debtCustomer.AmountOfDebt - Convert.ToDecimal(textBox8.Text.ToString()) : 0,
+                RemaingDebt = debtCustomer.RemaingDebt >= Convert.ToDecimal(textBox8.Text.ToString()) ? debtCustomer.RemaingDebt - Convert.ToDecimal(textBox8.Text.ToString()) : 0
+            };
+            _debtCustomerService.Update(updatedDebtCustomer);
+
+            Product updatedUpdated = new Product()
+            {
+                Id = product.Id,
+                BarcodeNo = product.BarcodeNo,
+                Amount = product.Amount + Convert.ToInt32(textBox9.Text),
+                Code = product.Code,
+                Name = product.Name,
+                UnitOfPrice = product.UnitOfPrice,
+                WayBillId = product.WayBillId
+            };
+            _productService.Update(updatedUpdated);
+          
+            var sale = _saleService.GetById(selectedSale);
+            if (sale == null)
+            {
+                MessageBox.Show("Hata", "Satış bulunamadı");
+                return;
+            }
+
+            _saleService.Delete(sale.Data);
+            var creditSale = _creditSaleService.GetById(selectedSale);
+            _creditSaleService.Delete(creditSale.Data);
 
         }
 

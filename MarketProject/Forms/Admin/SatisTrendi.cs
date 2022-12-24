@@ -25,6 +25,7 @@ namespace MarketProject.Forms.Admin
         private void SatisTrendi_Load(object sender, EventArgs e)
         {
             LoadData();
+          
             // CHART baslangic komut
             //chart1.Series["SatisTrendi"].Points.AddXY("tarih1", 15);  // normalde 15 yerine ilgili tarihin satış verisi
             //chart1.Series["SatisTrendi"].Points.AddXY("tarih2", 5);
@@ -42,6 +43,10 @@ namespace MarketProject.Forms.Admin
             if (response.Success)
             {
                 dataGridView1.DataSource = response.Data;
+                chart1.DataSource = response.Data;
+                chart1.Series["SatısTrendi"].XValueMember = "SaleDate";
+                chart1.Series["SatısTrendi"].YValueMembers = "Sum";
+                
             }
         }
 
@@ -52,6 +57,10 @@ namespace MarketProject.Forms.Admin
             if (response.Success)
             {
                 dataGridView1.DataSource = response.Data;
+                chart1.Series["SatısTrendi"].Points.Clear();
+                chart1.DataSource = dataGridView1.DataSource;
+                chart1.Series["SatısTrendi"].XValueMember = "SaleDate";
+                chart1.Series["SatısTrendi"].YValueMembers = "Sum";
             }
         }
     }
