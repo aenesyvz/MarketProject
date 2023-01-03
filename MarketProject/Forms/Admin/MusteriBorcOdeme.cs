@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
@@ -22,6 +23,7 @@ namespace MarketProject.Forms.Admin
         private readonly IDebtCustomerService _debtCustomerService = new DebtCustomerManager();
         private readonly ISaleService _saleService = new SaleManager();
         private readonly IAuthService _authService = new AuthManager();
+        private readonly ICustomerPaymentService _customerPaymentService = new CustomerPaymentManager();
         List<CreditSaleDto> creditSaleDtos;
         CreditSaleDto creditSaleDto;
         DebtCustomer debtCustomer;
@@ -73,6 +75,14 @@ namespace MarketProject.Forms.Admin
                         RemaingDebt = debtCustomer.RemaingDebt - Convert.ToInt32(textBox5.Text.ToString())
                     };
                     _debtCustomerService.Update(updatedDebtCustomer);
+                    CustomerPayment customerPayment = new CustomerPayment()
+                    {
+                        CustomerId= debtCustomer.CustomerId,
+                        DebtCustomerId = _debCustomerId,
+                        Payment = Convert.ToDecimal(textBox5.Text.ToString()),
+                        AddedPayment = DateTime.Now
+                    };
+                    _customerPaymentService.Add(customerPayment);
                     LoadData();
                     textBox5.Text = "";
                 }
@@ -131,7 +141,7 @@ namespace MarketProject.Forms.Admin
             var select = dataGridView1.SelectedCells[0].RowIndex;
             int id = Int32.Parse(dataGridView1.Rows[select].Cells[0].Value.ToString());
             product = _productService.GetById(id).Data;
-            selectedSale = Convert.ToInt32(dataGridView1.Rows[selectedSale].Cells[2].Value.ToString());
+            selectedSale = Convert.ToInt32(dataGridView1.Rows[select].Cells[2].Value.ToString());
             textBox6.Text = dataGridView1.Rows[select].Cells[7].Value.ToString();
             textBox7.Text = dataGridView1.Rows[select].Cells[8].Value.ToString();
             textBox8.Text = dataGridView1.Rows[select].Cells[10].Value.ToString();

@@ -18,7 +18,7 @@ namespace MarketProject.Forms.Admin
     {
         private readonly IDebtSupplierService _debtSupplierService = new DebtSupplierManager();
         private readonly ISupplierService _supplierService = new SupplierManager();
-       
+        private readonly ISupplierPaymentService _supplierPaymentService = new SupplierPaymentManager();
         Supplier supplier;
         List<DebtSupplier> debtSuppliers;
         DebtSupplier debtSupplier;
@@ -49,6 +49,14 @@ namespace MarketProject.Forms.Admin
                     RemaingDebt = debtSupplier.RemaingDebt - Convert.ToInt32(textBox1.Text),
                 };
                 _debtSupplierService.Update(updatedDebtSupplier);
+                SupplierPayment supplierPayment = new SupplierPayment()
+                {
+                    SupplierId = debtSupplier.SupplierId,
+                    DebtSupplierId = debtSupplier.Id,
+                    Payment = Convert.ToDecimal(textBox1.Text),
+                    AddedPayment = DateTime.Now
+                };
+                _supplierPaymentService.Add(supplierPayment);
                 LoadData();
                 textBox5.Text ="";
                 textBox6.Text = "";

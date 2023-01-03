@@ -28,5 +28,11 @@ namespace MarketProject.Forms.Admin
             TedarikciBorc tedarikciBorc = new TedarikciBorc();
             tedarikciBorc.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            TedarikOdemeGor tedarikOdemeGor = new TedarikOdemeGor();
+            tedarikOdemeGor.Show();
+        }
     }
 }

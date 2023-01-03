@@ -3,6 +3,7 @@ using MarketProject.Core.Utilities.Results;
 using MarketProject.DataAccess.Abstract;
 using MarketProject.DataAccess.Concrete;
 using MarketProject.Entities.Concrete;
+using MarketProject.Entities.Dtos;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -47,6 +48,11 @@ namespace MarketProject.Business.Concrete
         public IDataResult<List<Product>> GetListLowStockProduct()
         {
             return new SuccessDataResult<List<Product>>(_productDal.GetList().Where(x => x.Amount < 100).ToList());
+        }
+
+        public IDataResult<List<ProductProfitAndDamageDto>> GetListProductProfitAndDamage()
+        {
+            return new SuccessDataResult<List<ProductProfitAndDamageDto>>(_productDal.GetListProductProfitAndDamage());
         }
 
         public IResult Update(Product product)

@@ -28,5 +28,11 @@ namespace MarketProject.Forms.Admin
             MusteriBorc musteriBorc = new MusteriBorc();
             musteriBorc.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MusteriOdemeListesi musteriOdemeListesi = new MusteriOdemeListesi();
+            musteriOdemeListesi.Show();
+        }
     }
 }

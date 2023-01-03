@@ -15,6 +15,8 @@ namespace MarketProject.Forms.Admin
 {
     public partial class MainForm : Form
     {
+        public static string UserFirstName;
+        public static string UserLastName;
         //constructor
         public MainForm()
         {
@@ -81,6 +83,10 @@ namespace MarketProject.Forms.Admin
         private void MainForm_Load(object sender, EventArgs e)
         {
             timer1.Start();
+            UserFirstName = LoginScreen.LoginScreen.admin.FirstName.ToString();
+            UserLastName = LoginScreen.LoginScreen.admin.LastName.ToString();
+            label6.Text =UserFirstName;
+            label4.Text = UserLastName;
         }
 
         private void timer1_Tick(object sender, EventArgs e)

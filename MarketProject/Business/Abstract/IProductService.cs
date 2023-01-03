@@ -1,5 +1,6 @@
 ﻿using MarketProject.Core.Utilities.Results;
 using MarketProject.Entities.Concrete;
+using MarketProject.Entities.Dtos;
 using System.Collections.Generic;
 
 namespace MarketProject.Business.Abstract
@@ -14,5 +15,6 @@ namespace MarketProject.Business.Abstract
         IDataResult<Product> GetByCode(string code);
         IDataResult<Product> GetByBarcode(string code);
         IDataResult<List<Product>> GetListLowStockProduct();
+        IDataResult<List<ProductProfitAndDamageDto>> GetListProductProfitAndDamage();
     }
 }

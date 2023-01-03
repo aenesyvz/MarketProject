@@ -1,4 +1,5 @@
 ﻿using MarketProject.Business.Abstract;
+using MarketProject.Core.Utilities.Business;
 using MarketProject.Core.Utilities.Results;
 using MarketProject.DataAccess.Abstract;
 using MarketProject.DataAccess.Concrete;
@@ -18,6 +19,11 @@ namespace MarketProject.Business.Concrete
         //}
         public IResult Add(Customer customer)
         {
+            IResult result = BusinessRules.Run(CheckIfPhoneNumberExists(customer.PhoneNumber));
+            if(result != null)
+            {
+                return result;
+            }
             _customerDal.Add(customer);
             return new SuccessResult();
         }
@@ -45,7 +51,26 @@ namespace MarketProject.Business.Concrete
 
         public IResult Update(Customer customer)
         {
+            IResult result = BusinessRules.Run(CheckIfPhoneNumberExists(customer.PhoneNumber));
+            if (result != null)
+            {
+                return result;
+            }
             _customerDal.Update(customer);
+            return new SuccessResult();
+        }
+
+
+
+        //Business Rules
+
+        private IResult CheckIfPhoneNumberExists(string phoneNumber)
+        {
+            var result = _customerDal.GetList(x => x.PhoneNumber == phoneNumber).ToList().Any();
+            if(result)
+            {
+                return new ErrorResult("Bu telefon numarasına ait bir müşteri zaten bulunmaktadır!");
+            }
             return new SuccessResult();
         }
     }

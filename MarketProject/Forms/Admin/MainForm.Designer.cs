@@ -58,6 +58,9 @@ namespace MarketProject.Forms.Admin
             this.label1 = new System.Windows.Forms.Label();
             this.labelHosgeldiniz = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panelLeft.SuspendLayout();
             this.panelTopLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -75,6 +78,9 @@ namespace MarketProject.Forms.Admin
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelLeft.Controls.Add(this.label6);
+            this.panelLeft.Controls.Add(this.label4);
+            this.panelLeft.Controls.Add(this.label3);
             this.panelLeft.Controls.Add(this.btnRapor);
             this.panelLeft.Controls.Add(this.btnTedarikci);
             this.panelLeft.Controls.Add(this.btnExit);
@@ -411,6 +417,36 @@ namespace MarketProject.Forms.Admin
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 667);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 27);
+            this.label3.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(12, 677);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 29);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "label4";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(12, 626);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 29);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "label6";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
@@ -431,6 +467,7 @@ namespace MarketProject.Forms.Admin
             this.Text = "ÇİÇEK MARKET";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panelLeft.ResumeLayout(false);
+            this.panelLeft.PerformLayout();
             this.panelTopLeft.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -476,5 +513,8 @@ namespace MarketProject.Forms.Admin
         private PictureBox pictureBox6;
         private Label label2;
         private PictureBox pictureBox8;
+        private Label label4;
+        private Label label3;
+        private Label label6;
     }
 }
