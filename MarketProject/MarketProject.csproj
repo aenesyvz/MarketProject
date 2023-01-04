@@ -81,27 +81,32 @@
     <Compile Include="Business\Abstract\IAdminService.cs" />
     <Compile Include="Business\Abstract\IAuthService.cs" />
     <Compile Include="Business\Abstract\ICreditSaleService.cs" />
+    <Compile Include="Business\Abstract\ICustomerPaymentService.cs" />
     <Compile Include="Business\Abstract\ICustomerService.cs" />
     <Compile Include="Business\Abstract\IDebtCustomerService.cs" />
     <Compile Include="Business\Abstract\IDebtSupplierService.cs" />
     <Compile Include="Business\Abstract\IProductService.cs" />
     <Compile Include="Business\Abstract\ISaleService.cs" />
+    <Compile Include="Business\Abstract\ISupplierPaymentService.cs" />
     <Compile Include="Business\Abstract\ISupplierService.cs" />
     <Compile Include="Business\Abstract\IWaybillService.cs" />
     <Compile Include="Business\Concrete\AdminManager.cs" />
     <Compile Include="Business\Concrete\AuthManager.cs" />
     <Compile Include="Business\Concrete\CreditSaleManager.cs" />
     <Compile Include="Business\Concrete\CustomerManager.cs" />
+    <Compile Include="Business\Concrete\CustomerPaymentManager.cs" />
     <Compile Include="Business\Concrete\DebtCustomerManager.cs" />
     <Compile Include="Business\Concrete\DebtSupplierManager.cs" />
     <Compile Include="Business\Concrete\ProductManager.cs" />
     <Compile Include="Business\Concrete\SaleManager.cs" />
     <Compile Include="Business\Concrete\SupplierManager.cs" />
+    <Compile Include="Business\Concrete\SupplierPaymentManager.cs" />
     <Compile Include="Business\Concrete\WaybillManager.cs" />
     <Compile Include="Core\DataAccess\IEntityRepository.cs" />
     <Compile Include="Core\DataAccess\EntityFramework\EfEntityRepositoryBase.cs" />
     <Compile Include="Core\Entities\IDto.cs" />
     <Compile Include="Core\Entities\IEntity.cs" />
+    <Compile Include="Core\Utilities\Business\BusinessRules.cs" />
     <Compile Include="Core\Utilities\Results\DataResult.cs" />
     <Compile Include="Core\Utilities\Results\ErrorDataResult.cs" />
     <Compile Include="Core\Utilities\Results\ErrorResult.cs" />
@@ -113,35 +118,44 @@
     <Compile Include="DataAccess\Abstract\IAdminDal.cs" />
     <Compile Include="DataAccess\Abstract\ICreditSaleDal.cs" />
     <Compile Include="DataAccess\Abstract\ICustomerDal.cs" />
+    <Compile Include="DataAccess\Abstract\ICustomerPaymentDal.cs" />
     <Compile Include="DataAccess\Abstract\IDebtCustomerDal.cs" />
     <Compile Include="DataAccess\Abstract\IDebtSupplierDal.cs" />
     <Compile Include="DataAccess\Abstract\IProductDal.cs" />
     <Compile Include="DataAccess\Abstract\ISaleDal.cs" />
     <Compile Include="DataAccess\Abstract\ISupplierDal.cs" />
+    <Compile Include="DataAccess\Abstract\ISupplierPaymentDal.cs" />
     <Compile Include="DataAccess\Abstract\IWaybillDal.cs" />
     <Compile Include="DataAccess\Concrete\EfAdminDal.cs" />
     <Compile Include="DataAccess\Concrete\Context\ContextDb.cs" />
     <Compile Include="DataAccess\Concrete\EfCreditSaleDal.cs" />
     <Compile Include="DataAccess\Concrete\EfCustomerDal.cs" />
+    <Compile Include="DataAccess\Concrete\EfCustomerPaymentDal.cs" />
     <Compile Include="DataAccess\Concrete\EfDebtCustomerDal.cs" />
     <Compile Include="DataAccess\Concrete\EfDebtSupplierDal.cs" />
     <Compile Include="DataAccess\Concrete\EfProductDal.cs" />
     <Compile Include="DataAccess\Concrete\EfSaleDal.cs" />
     <Compile Include="DataAccess\Concrete\EFSupplierDal.cs" />
+    <Compile Include="DataAccess\Concrete\EfSupplierPaymentDal.cs" />
     <Compile Include="DataAccess\Concrete\EfWaybillDal.cs" />
     <Compile Include="Entities\Concrete\Admin.cs" />
     <Compile Include="Entities\Concrete\CreditSale.cs" />
     <Compile Include="Entities\Concrete\Customer.cs" />
+    <Compile Include="Entities\Concrete\CustomerPayment.cs" />
     <Compile Include="Entities\Concrete\DebtCustomer.cs" />
     <Compile Include="Entities\Concrete\DebtSupplier.cs" />
     <Compile Include="Entities\Concrete\Product.cs" />
     <Compile Include="Entities\Concrete\Sale.cs" />
     <Compile Include="Entities\Concrete\Supplier.cs" />
+    <Compile Include="Entities\Concrete\SupplierPayment.cs" />
     <Compile Include="Entities\Concrete\Waybill.cs" />
     <Compile Include="Entities\Dtos\CreditSaleDto.cs" />
+    <Compile Include="Entities\Dtos\CustomerPaymentDto.cs" />
     <Compile Include="Entities\Dtos\CustomerTotalDebtDto.cs" />
+    <Compile Include="Entities\Dtos\ProductProfitAndDamageDto.cs" />
     <Compile Include="Entities\Dtos\SaleProductDto.cs" />
     <Compile Include="Entities\Dtos\SaleTrendByDateDto.cs" />
+    <Compile Include="Entities\Dtos\SupplierPaymentDto.cs" />
     <Compile Include="Entities\Dtos\SupplierTotalDebtDto.cs" />
     <Compile Include="Entities\Dtos\UserForLoginDto.cs" />
     <Compile Include="Forms\Admin\EnCokSatanUrunler.cs">
@@ -198,6 +212,12 @@
     <Compile Include="Forms\Admin\MusteriIslemleriAnaForm.Designer.cs">
       <DependentUpon>MusteriIslemleriAnaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Admin\MusteriOdemeListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\MusteriOdemeListesi.Designer.cs">
+      <DependentUpon>MusteriOdemeListesi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Admin\RaporAlim.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +265,12 @@
     </Compile>
     <Compile Include="Forms\Admin\TedarikciIslemleri.Designer.cs">
       <DependentUpon>TedarikciIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\TedarikOdemeGor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\TedarikOdemeGor.Designer.cs">
+      <DependentUpon>TedarikOdemeGor.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin\TopluMusteriBorcRapor.cs">
       <SubType>Form</SubType>
@@ -308,6 +334,18 @@
     <Compile Include="Migrations\202212200552078_aey3704.designer.cs">
       <DependentUpon>202212200552078_aey3704.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301012008175_aey3705.cs" />
+    <Compile Include="Migrations\202301012008175_aey3705.designer.cs">
+      <DependentUpon>202301012008175_aey3705.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301020906281_aey3706.cs" />
+    <Compile Include="Migrations\202301020906281_aey3706.designer.cs">
+      <DependentUpon>202301020906281_aey3706.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301021406200_aey3707.cs" />
+    <Compile Include="Migrations\202301021406200_aey3707.designer.cs">
+      <DependentUpon>202301021406200_aey3707.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -338,6 +376,9 @@
     <EmbeddedResource Include="Forms\Admin\MusteriIslemleriAnaForm.resx">
       <DependentUpon>MusteriIslemleriAnaForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\MusteriOdemeListesi.resx">
+      <DependentUpon>MusteriOdemeListesi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\RaporAlim.resx">
       <DependentUpon>RaporAlim.cs</DependentUpon>
     </EmbeddedResource>
@@ -361,6 +402,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\TedarikciIslemleri.resx">
       <DependentUpon>TedarikciIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\TedarikOdemeGor.resx">
+      <DependentUpon>TedarikOdemeGor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\TopluMusteriBorcRapor.resx">
       <DependentUpon>TopluMusteriBorcRapor.cs</DependentUpon>
@@ -397,6 +441,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212200552078_aey3704.resx">
       <DependentUpon>202212200552078_aey3704.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301012008175_aey3705.resx">
+      <DependentUpon>202301012008175_aey3705.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301020906281_aey3706.resx">
+      <DependentUpon>202301020906281_aey3706.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301021406200_aey3707.resx">
+      <DependentUpon>202301021406200_aey3707.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

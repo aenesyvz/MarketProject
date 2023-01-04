@@ -13,6 +13,7 @@ namespace MarketProject.Entities.Concrete
         //public string Barcode { get; set; }
         public float Price { get; set; }
         public int Amount { get; set; }
+        public decimal TotalPrice { get; set; }
         public int SupplierId { get; set; }
         public DateTime AddedDate { get; set; }
     }

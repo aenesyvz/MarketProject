@@ -20,6 +20,7 @@ namespace MarketProject.Forms.LoginScreen
     public partial class LoginScreen : Form
     {
         private readonly IAuthService _authService = new AuthManager();
+        public static Entities.Concrete.Admin admin;
         public LoginScreen()
         {
             InitializeComponent();
@@ -77,6 +78,7 @@ namespace MarketProject.Forms.LoginScreen
             {
                 textBox1.Text = "";
                 textBox4.Text = "";
+                admin = response.Data;
                 this.DialogResult= DialogResult.OK;
                this.Close();
 

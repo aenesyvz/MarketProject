@@ -60,7 +60,8 @@ namespace MarketProject.Forms.Admin
                     waybill.Amount = Convert.ToInt32(data[4]);
                     waybill.SupplierId = supplier.Id;
                     waybill.AddedDate = DateTime.Now;
-                    
+                    waybill.TotalPrice = Convert.ToDecimal(waybill.Price * waybill.Amount);
+
                     _waybillService.Add(waybill);
 
 
@@ -87,9 +88,9 @@ namespace MarketProject.Forms.Admin
                         _productService.Update(product);
                     }
 
-                    var debtSupplier = _debtSupplierService.GetBySupplierId(waybill.SupplierId).Data;
-                    if (debtSupplier == null)
-                    {
+                    //var debtSupplier = _debtSupplierService.GetBySupplierId(waybill.SupplierId).Data;
+                    //if (debtSupplier == null)
+                    //{
                         DebtSupplier createdDebtSupplier = new DebtSupplier()
                         {
                             SupplierId = waybill.SupplierId,
@@ -99,13 +100,13 @@ namespace MarketProject.Forms.Admin
                             RemaingDebt = (float)Convert.ToDouble(waybill.Amount * waybill.Price),
                         };
                         _debtSupplierService.Add(createdDebtSupplier);
-                    }
-                    else
-                    {
-                        debtSupplier.AmountOfDebt += (float)Convert.ToDouble(waybill.Amount * waybill.Price);
-                        debtSupplier.RemaingDebt += (float)Convert.ToDouble(waybill.Amount * waybill.Price);
-                        _debtSupplierService.Update(debtSupplier);
-                    }
+                    //}
+                    //else
+                    //{
+                    //    debtSupplier.AmountOfDebt += (float)Convert.ToDouble(waybill.Amount * waybill.Price);
+                    //    debtSupplier.RemaingDebt += (float)Convert.ToDouble(waybill.Amount * waybill.Price);
+                    //    _debtSupplierService.Update(debtSupplier);
+                    //}
                 }
             }
 

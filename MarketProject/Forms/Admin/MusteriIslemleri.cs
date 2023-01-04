@@ -45,6 +45,10 @@ namespace MarketProject.Forms.Admin
                 LoadData();
                 MessageBox.Show("Müşteri Eklendi", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else
+            {
+                MessageBox.Show("Bu telefon numarasına sahip bir müşteri zaten kayıtlı!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void LoadData()
@@ -72,8 +76,17 @@ namespace MarketProject.Forms.Admin
                 PhoneNumber = textBox3.Text,
                 AddedDate = customer.AddedDate
             };
-            _customerService.Update(updatedCustomer);
-            LoadData();
+            var response = _customerService.Update(updatedCustomer);
+            if (response.Success)
+            {
+                LoadData();
+                MessageBox.Show("Müşteri Güncellendi", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Bu telefon numarasına sahip bir müşteri zaten kayıtlı!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)

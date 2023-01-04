@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MarketProject.Business.Abstract;
+using MarketProject.Business.Concrete;
+using MarketProject.Entities.Dtos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +15,8 @@ namespace MarketProject.Forms.Admin
 {
     public partial class UrunKarZararRapor : Form
     {
+        private readonly IProductService _productService = new ProductManager();
+        List<ProductProfitAndDamageDto> productProfitAndDamageList;
         public UrunKarZararRapor()
         {
             InitializeComponent();
@@ -35,6 +40,27 @@ namespace MarketProject.Forms.Admin
         private void button6_Click(object sender, EventArgs e)
         {
             // pdf raporu hazırlasın
+        }
+
+        private void UrunKarZararRapor_Load(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+        private void LoadData()
+        {
+            var response = _productService.GetListProductProfitAndDamage();
+            if (response.Success)
+            {
+                productProfitAndDamageList = response.Data;
+                dataGridView1.DataSource = response.Data;
+                chart1.DataSource = response.Data;
+                chart1.Series["Series1"].XValueMember = "Barcode";
+                chart1.Series["Series1"].YValueMembers = "Result";
+            }
+            else
+            {
+                MessageBox.Show("Veriler getirilemedi","Hata",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
     }
 }
