@@ -52,7 +52,7 @@ namespace MarketProject.Forms.Admin
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(206, 302);
+            this.button1.Location = new System.Drawing.Point(198, 302);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 40);
             this.button1.TabIndex = 0;
@@ -64,8 +64,7 @@ namespace MarketProject.Forms.Admin
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(467, 67);
+            this.dataGridView1.Location = new System.Drawing.Point(404, 63);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
@@ -77,7 +76,7 @@ namespace MarketProject.Forms.Admin
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 212);
+            this.label1.Location = new System.Drawing.Point(16, 212);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 24);
             this.label1.TabIndex = 2;
@@ -86,7 +85,7 @@ namespace MarketProject.Forms.Admin
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(142, 212);
+            this.textBox1.Location = new System.Drawing.Point(134, 212);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(244, 24);
             this.textBox1.TabIndex = 5;
@@ -97,7 +96,7 @@ namespace MarketProject.Forms.Admin
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(790, 23);
+            this.button4.Location = new System.Drawing.Point(759, 19);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(95, 31);
             this.button4.TabIndex = 6;
@@ -109,7 +108,7 @@ namespace MarketProject.Forms.Admin
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 254);
+            this.label2.Location = new System.Drawing.Point(25, 254);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 24);
             this.label2.TabIndex = 8;
@@ -118,8 +117,9 @@ namespace MarketProject.Forms.Admin
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(142, 255);
+            this.textBox2.Location = new System.Drawing.Point(134, 255);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(244, 24);
             this.textBox2.TabIndex = 9;
             // 
@@ -140,7 +140,7 @@ namespace MarketProject.Forms.Admin
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1046, 492);
+            this.panel1.Size = new System.Drawing.Size(970, 488);
             this.panel1.TabIndex = 12;
             // 
             // button2
@@ -149,7 +149,7 @@ namespace MarketProject.Forms.Admin
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(904, 22);
+            this.button2.Location = new System.Drawing.Point(860, 18);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(95, 32);
             this.button2.TabIndex = 12;
@@ -161,7 +161,7 @@ namespace MarketProject.Forms.Admin
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(463, 26);
+            this.label3.Location = new System.Drawing.Point(400, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 24);
             this.label3.TabIndex = 11;
@@ -170,9 +170,9 @@ namespace MarketProject.Forms.Admin
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(589, 26);
+            this.textBox3.Location = new System.Drawing.Point(526, 22);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(179, 24);
+            this.textBox3.Size = new System.Drawing.Size(227, 24);
             this.textBox3.TabIndex = 10;
             // 
             // UrunEkleme
@@ -180,7 +180,7 @@ namespace MarketProject.Forms.Admin
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(242)))), ((int)(((byte)(229)))));
-            this.ClientSize = new System.Drawing.Size(1046, 492);
+            this.ClientSize = new System.Drawing.Size(970, 488);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

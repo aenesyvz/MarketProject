@@ -33,6 +33,9 @@ namespace MarketProject.Forms.Admin
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnRapor = new System.Windows.Forms.Button();
             this.btnTedarikci = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -41,7 +44,6 @@ namespace MarketProject.Forms.Admin
             this.btnMarketSatis = new System.Windows.Forms.Button();
             this.panelTopLeft = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnHome = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panelTopMid = new System.Windows.Forms.Panel();
@@ -58,13 +60,13 @@ namespace MarketProject.Forms.Admin
             this.label1 = new System.Windows.Forms.Label();
             this.labelHosgeldiniz = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panelLeft.SuspendLayout();
             this.panelTopLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelTopMid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -73,14 +75,17 @@ namespace MarketProject.Forms.Admin
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelLeft.Controls.Add(this.label6);
-            this.panelLeft.Controls.Add(this.label4);
             this.panelLeft.Controls.Add(this.label3);
+            this.panelLeft.Controls.Add(this.btnHome);
             this.panelLeft.Controls.Add(this.btnRapor);
             this.panelLeft.Controls.Add(this.btnTedarikci);
             this.panelLeft.Controls.Add(this.btnExit);
@@ -95,6 +100,36 @@ namespace MarketProject.Forms.Admin
             this.panelLeft.Size = new System.Drawing.Size(286, 911);
             this.panelLeft.TabIndex = 0;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(138, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 24);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "label6";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(138, 51);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 24);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "label4";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 667);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 22);
+            this.label3.TabIndex = 8;
+            // 
             // btnRapor
             // 
             this.btnRapor.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -104,9 +139,9 @@ namespace MarketProject.Forms.Admin
             this.btnRapor.ForeColor = System.Drawing.Color.White;
             this.btnRapor.Image = ((System.Drawing.Image)(resources.GetObject("btnRapor.Image")));
             this.btnRapor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRapor.Location = new System.Drawing.Point(0, 506);
+            this.btnRapor.Location = new System.Drawing.Point(0, 615);
             this.btnRapor.Name = "btnRapor";
-            this.btnRapor.Size = new System.Drawing.Size(287, 100);
+            this.btnRapor.Size = new System.Drawing.Size(285, 97);
             this.btnRapor.TabIndex = 7;
             this.btnRapor.Text = "  Rapor Alım";
             this.btnRapor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -122,9 +157,9 @@ namespace MarketProject.Forms.Admin
             this.btnTedarikci.ForeColor = System.Drawing.Color.White;
             this.btnTedarikci.Image = ((System.Drawing.Image)(resources.GetObject("btnTedarikci.Image")));
             this.btnTedarikci.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTedarikci.Location = new System.Drawing.Point(0, 400);
+            this.btnTedarikci.Location = new System.Drawing.Point(0, 512);
             this.btnTedarikci.Name = "btnTedarikci";
-            this.btnTedarikci.Size = new System.Drawing.Size(287, 100);
+            this.btnTedarikci.Size = new System.Drawing.Size(285, 97);
             this.btnTedarikci.TabIndex = 6;
             this.btnTedarikci.Text = "  Tedarikçi İşlemleri";
             this.btnTedarikci.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -160,9 +195,9 @@ namespace MarketProject.Forms.Admin
             this.btnMusteri.ForeColor = System.Drawing.Color.White;
             this.btnMusteri.Image = ((System.Drawing.Image)(resources.GetObject("btnMusteri.Image")));
             this.btnMusteri.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMusteri.Location = new System.Drawing.Point(0, 294);
+            this.btnMusteri.Location = new System.Drawing.Point(0, 409);
             this.btnMusteri.Name = "btnMusteri";
-            this.btnMusteri.Size = new System.Drawing.Size(287, 100);
+            this.btnMusteri.Size = new System.Drawing.Size(285, 97);
             this.btnMusteri.TabIndex = 3;
             this.btnMusteri.Text = "  Müşteri İşlemleri";
             this.btnMusteri.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -178,9 +213,9 @@ namespace MarketProject.Forms.Admin
             this.btnUrunStok.ForeColor = System.Drawing.Color.White;
             this.btnUrunStok.Image = ((System.Drawing.Image)(resources.GetObject("btnUrunStok.Image")));
             this.btnUrunStok.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUrunStok.Location = new System.Drawing.Point(0, 200);
+            this.btnUrunStok.Location = new System.Drawing.Point(0, 306);
             this.btnUrunStok.Name = "btnUrunStok";
-            this.btnUrunStok.Size = new System.Drawing.Size(287, 94);
+            this.btnUrunStok.Size = new System.Drawing.Size(285, 97);
             this.btnUrunStok.TabIndex = 2;
             this.btnUrunStok.Text = "  Ürün İşlemleri";
             this.btnUrunStok.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -196,9 +231,9 @@ namespace MarketProject.Forms.Admin
             this.btnMarketSatis.ForeColor = System.Drawing.Color.White;
             this.btnMarketSatis.Image = ((System.Drawing.Image)(resources.GetObject("btnMarketSatis.Image")));
             this.btnMarketSatis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMarketSatis.Location = new System.Drawing.Point(0, 100);
+            this.btnMarketSatis.Location = new System.Drawing.Point(0, 203);
             this.btnMarketSatis.Name = "btnMarketSatis";
-            this.btnMarketSatis.Size = new System.Drawing.Size(287, 100);
+            this.btnMarketSatis.Size = new System.Drawing.Size(285, 97);
             this.btnMarketSatis.TabIndex = 1;
             this.btnMarketSatis.Text = "  Market Satışları";
             this.btnMarketSatis.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -208,9 +243,13 @@ namespace MarketProject.Forms.Admin
             // panelTopLeft
             // 
             this.panelTopLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.panelTopLeft.Controls.Add(this.pictureBox4);
+            this.panelTopLeft.Controls.Add(this.pictureBox11);
             this.panelTopLeft.Controls.Add(this.pictureBox3);
-            this.panelTopLeft.Controls.Add(this.btnHome);
+            this.panelTopLeft.Controls.Add(this.pictureBox10);
+            this.panelTopLeft.Controls.Add(this.label4);
+            this.panelTopLeft.Controls.Add(this.pictureBox9);
+            this.panelTopLeft.Controls.Add(this.label6);
+            this.panelTopLeft.Controls.Add(this.pictureBox4);
             this.panelTopLeft.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTopLeft.Location = new System.Drawing.Point(0, 0);
             this.panelTopLeft.Margin = new System.Windows.Forms.Padding(4);
@@ -221,38 +260,27 @@ namespace MarketProject.Forms.Admin
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(194, 25);
+            this.pictureBox4.Location = new System.Drawing.Point(256, 0);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 7;
             this.pictureBox4.TabStop = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(28, 25);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            // 
             // btnHome
             // 
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnHome.Location = new System.Drawing.Point(84, 3);
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(0, 100);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(104, 97);
+            this.btnHome.Size = new System.Drawing.Size(285, 97);
             this.btnHome.TabIndex = 1;
-            this.btnHome.Text = "Ana Sayfa";
-            this.btnHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnHome.Text = " Ana Sayfa";
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
@@ -263,7 +291,7 @@ namespace MarketProject.Forms.Admin
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(-275, 608);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(316, 29);
+            this.label2.Size = new System.Drawing.Size(252, 24);
             this.label2.TabIndex = 8;
             this.label2.Text = "Şu an sistemdeki yönetici:";
             // 
@@ -294,7 +322,7 @@ namespace MarketProject.Forms.Admin
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(55, 13);
+            this.pictureBox7.Location = new System.Drawing.Point(59, 12);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(45, 45);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -309,7 +337,7 @@ namespace MarketProject.Forms.Admin
             this.labelBaslik.ForeColor = System.Drawing.Color.White;
             this.labelBaslik.Location = new System.Drawing.Point(363, 25);
             this.labelBaslik.Name = "labelBaslik";
-            this.labelBaslik.Size = new System.Drawing.Size(375, 69);
+            this.labelBaslik.Size = new System.Drawing.Size(302, 55);
             this.labelBaslik.TabIndex = 0;
             this.labelBaslik.Text = "ANA SAYFA";
             // 
@@ -320,7 +348,7 @@ namespace MarketProject.Forms.Admin
             this.labelTarih.ForeColor = System.Drawing.Color.White;
             this.labelTarih.Location = new System.Drawing.Point(869, 65);
             this.labelTarih.Name = "labelTarih";
-            this.labelTarih.Size = new System.Drawing.Size(69, 29);
+            this.labelTarih.Size = new System.Drawing.Size(53, 24);
             this.labelTarih.TabIndex = 8;
             this.labelTarih.Text = "Tarih";
             // 
@@ -329,9 +357,9 @@ namespace MarketProject.Forms.Admin
             this.labelSaat.AutoSize = true;
             this.labelSaat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSaat.ForeColor = System.Drawing.Color.White;
-            this.labelSaat.Location = new System.Drawing.Point(39, 60);
+            this.labelSaat.Location = new System.Drawing.Point(43, 59);
             this.labelSaat.Name = "labelSaat";
-            this.labelSaat.Size = new System.Drawing.Size(61, 29);
+            this.labelSaat.Size = new System.Drawing.Size(46, 24);
             this.labelSaat.TabIndex = 9;
             this.labelSaat.Text = "Saat";
             // 
@@ -398,7 +426,7 @@ namespace MarketProject.Forms.Admin
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(122)))));
             this.label1.Location = new System.Drawing.Point(394, 322);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(385, 54);
+            this.label1.Size = new System.Drawing.Size(309, 42);
             this.label1.TabIndex = 4;
             this.label1.Text = "ÇİÇEK MARKET";
             // 
@@ -408,7 +436,7 @@ namespace MarketProject.Forms.Admin
             this.labelHosgeldiniz.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHosgeldiniz.Location = new System.Drawing.Point(342, 421);
             this.labelHosgeldiniz.Name = "labelHosgeldiniz";
-            this.labelHosgeldiniz.Size = new System.Drawing.Size(512, 39);
+            this.labelHosgeldiniz.Size = new System.Drawing.Size(417, 31);
             this.labelHosgeldiniz.TabIndex = 0;
             this.labelHosgeldiniz.Text = "Market sistemine hoşgeldiniz...";
             // 
@@ -417,39 +445,48 @@ namespace MarketProject.Forms.Admin
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label3
+            // pictureBox9
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 667);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 27);
-            this.label3.TabIndex = 8;
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(68, 19);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox9.TabIndex = 11;
+            this.pictureBox9.TabStop = false;
             // 
-            // label4
+            // pictureBox10
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(12, 677);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 29);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "label4";
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(255, 70);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 12;
+            this.pictureBox10.TabStop = false;
             // 
-            // label6
+            // pictureBox3
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(12, 626);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 29);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "label6";
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(0, 70);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 14;
+            this.pictureBox11.TabStop = false;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
@@ -469,8 +506,8 @@ namespace MarketProject.Forms.Admin
             this.panelLeft.ResumeLayout(false);
             this.panelLeft.PerformLayout();
             this.panelTopLeft.ResumeLayout(false);
+            this.panelTopLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelTopMid.ResumeLayout(false);
             this.panelTopMid.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -481,6 +518,10 @@ namespace MarketProject.Forms.Admin
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -497,7 +538,6 @@ namespace MarketProject.Forms.Admin
         private Label labelBaslik;
         private Button btnHome;
         private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
         private Panel panelBeyaz;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
@@ -516,5 +556,9 @@ namespace MarketProject.Forms.Admin
         private Label label4;
         private Label label3;
         private Label label6;
+        private PictureBox pictureBox9;
+        private PictureBox pictureBox11;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox10;
     }
 }

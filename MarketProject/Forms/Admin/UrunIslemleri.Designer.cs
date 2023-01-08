@@ -60,7 +60,7 @@ namespace MarketProject.Forms.Admin
             this.btnStokGor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStokGor.ForeColor = System.Drawing.Color.White;
             this.btnStokGor.Image = ((System.Drawing.Image)(resources.GetObject("btnStokGor.Image")));
-            this.btnStokGor.Location = new System.Drawing.Point(406, 269);
+            this.btnStokGor.Location = new System.Drawing.Point(408, 269);
             this.btnStokGor.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnStokGor.Name = "btnStokGor";
             this.btnStokGor.Size = new System.Drawing.Size(275, 190);
@@ -77,7 +77,7 @@ namespace MarketProject.Forms.Admin
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(752, 269);
+            this.button1.Location = new System.Drawing.Point(747, 269);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(275, 190);
             this.button1.TabIndex = 16;
