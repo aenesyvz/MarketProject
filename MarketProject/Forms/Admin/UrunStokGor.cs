@@ -39,24 +39,6 @@ namespace MarketProject.Forms.Admin
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Product createdProduct = new Product()
-            {
-                Code = textBox2.Text,
-                BarcodeNo = textBox4.Text,
-                WayBillId = 0,
-                Amount = Convert.ToInt32(textBox5.Text),
-                UnitOfPrice = Convert.ToInt32(textBox6.Text)
-            };
-            var response = _productService.Add(createdProduct);
-            if (response.Success)
-            {
-                LoadData();
-                MessageBox.Show("Müşteri Eklendi", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             Product updatedProduct = new Product()
@@ -65,8 +47,9 @@ namespace MarketProject.Forms.Admin
                 WayBillId = Convert.ToInt32(textBox2.Text),
                 Code = textBox3.Text.ToString(),
                 BarcodeNo = textBox4.Text,
-                Amount = Convert.ToInt32(textBox5.Text),
-                UnitOfPrice = Convert.ToDecimal(textBox6.Text)
+                Name = textBox5.Text,
+                Amount = Convert.ToInt32(textBox6.Text),
+                UnitOfPrice = Convert.ToDecimal(textBox7.Text)
             };
             _productService.Update(updatedProduct);
             LoadData();

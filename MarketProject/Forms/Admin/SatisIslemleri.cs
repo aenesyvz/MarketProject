@@ -83,19 +83,21 @@ namespace MarketProject.Forms.Admin
         {
             if (textBox3.Text != null)
             {
-                int amaount = Convert.ToInt32(textBox3.Text);
+                int amount = Convert.ToInt32(textBox3.Text);
                 if (product == null)
                 {
                     MessageBox.Show("Ürün bulunamadı", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    if (product.Amount >= amaount)
+                    if (product.Amount >= amount)
                     {
                         string barcode = product.BarcodeNo;
+                        string productName = product.Name;
                         //               0         1       2         3             4               5        6             7
-                        string temp = barcode + " => " + amaount + " X " + product.UnitOfPrice + " = " + amaount * product.UnitOfPrice;
-                        totalPrice += product.UnitOfPrice * amaount;
+                        string temp = barcode + " => " + amount + " * " + product.UnitOfPrice + " = " + amount * product.UnitOfPrice;
+                        //string temp = productName + " [" + barcode + "]" + " => " + amount + " Adet *" + product.UnitOfPrice + " => " + amount * product.UnitOfPrice;
+                        totalPrice += product.UnitOfPrice * amount;
                         listBox1.Items.Add(temp);
                         MessageBox.Show("Ürün Sepete Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         textBox4.Text = totalPrice.ToString();
@@ -162,8 +164,6 @@ namespace MarketProject.Forms.Admin
                 textBox4.Text = totalPrice.ToString();
                 listBox1.Items.Remove(listBox1.SelectedItem);
             }
-            //MessageBox.Show("AFERİN", "aDAMMM", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
         }
 
         private void button5_Click(object sender, EventArgs e)

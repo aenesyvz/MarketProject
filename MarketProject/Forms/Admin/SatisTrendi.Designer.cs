@@ -51,7 +51,7 @@ namespace MarketProject.Forms.Admin
             this.labelBaslangic.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBaslangic.Location = new System.Drawing.Point(724, 403);
             this.labelBaslangic.Name = "labelBaslangic";
-            this.labelBaslangic.Size = new System.Drawing.Size(206, 29);
+            this.labelBaslangic.Size = new System.Drawing.Size(159, 24);
             this.labelBaslangic.TabIndex = 2;
             this.labelBaslangic.Text = "Başlangıç Tarihi =";
             // 
@@ -61,7 +61,7 @@ namespace MarketProject.Forms.Admin
             this.labelBitis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBitis.Location = new System.Drawing.Point(724, 466);
             this.labelBitis.Name = "labelBitis";
-            this.labelBitis.Size = new System.Drawing.Size(147, 29);
+            this.labelBitis.Size = new System.Drawing.Size(111, 24);
             this.labelBitis.TabIndex = 3;
             this.labelBitis.Text = "Bitiş Tarihi =";
             // 
@@ -70,7 +70,7 @@ namespace MarketProject.Forms.Admin
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.dateTimePicker1.Location = new System.Drawing.Point(728, 430);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(255, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(255, 22);
             this.dateTimePicker1.TabIndex = 4;
             // 
             // dateTimePicker2
@@ -79,7 +79,7 @@ namespace MarketProject.Forms.Admin
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.dateTimePicker2.Location = new System.Drawing.Point(728, 493);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(255, 26);
+            this.dateTimePicker2.Size = new System.Drawing.Size(255, 22);
             this.dateTimePicker2.TabIndex = 5;
             // 
             // button1
@@ -88,9 +88,9 @@ namespace MarketProject.Forms.Admin
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(795, 537);
+            this.button1.Location = new System.Drawing.Point(806, 537);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 40);
+            this.button1.Size = new System.Drawing.Size(101, 29);
             this.button1.TabIndex = 6;
             this.button1.Text = "HESAPLA";
             this.button1.UseVisualStyleBackColor = false;
@@ -123,12 +123,12 @@ namespace MarketProject.Forms.Admin
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(253, 355);
+            this.dataGridView1.Size = new System.Drawing.Size(253, 378);
             this.dataGridView1.TabIndex = 8;
             // 
             // SatisTrendi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(222)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1001, 589);

@@ -60,7 +60,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(655, 573);
+            this.dataGridView1.Size = new System.Drawing.Size(653, 573);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -189,6 +189,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(188, 95);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(235, 24);
             this.textBox2.TabIndex = 20;
             // 
@@ -196,13 +197,15 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(188, 135);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(235, 24);
             this.textBox3.TabIndex = 21;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(186, 175);
+            this.textBox4.Location = new System.Drawing.Point(188, 175);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(235, 24);
             this.textBox4.TabIndex = 22;
             // 
@@ -210,6 +213,7 @@
             // 
             this.textBox5.Location = new System.Drawing.Point(188, 296);
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(235, 24);
             this.textBox5.TabIndex = 23;
             // 
@@ -217,6 +221,7 @@
             // 
             this.textBox6.Location = new System.Drawing.Point(188, 336);
             this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(235, 24);
             this.textBox6.TabIndex = 24;
             // 
@@ -224,6 +229,7 @@
             // 
             this.textBox7.Location = new System.Drawing.Point(186, 376);
             this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(235, 24);
             this.textBox7.TabIndex = 25;
             // 

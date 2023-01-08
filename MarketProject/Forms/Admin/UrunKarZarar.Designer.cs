@@ -48,16 +48,16 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(107, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 24);
+            this.label1.Size = new System.Drawing.Size(0, 18);
             this.label1.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 39);
+            this.label2.Location = new System.Drawing.Point(901, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 29);
+            this.label2.Size = new System.Drawing.Size(145, 24);
             this.label2.TabIndex = 16;
             this.label2.Text = "Rapor Formatı =";
             // 
@@ -67,10 +67,10 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(345, 34);
+            this.button4.Location = new System.Drawing.Point(1011, 44);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(88, 37);
+            this.button4.Size = new System.Drawing.Size(88, 29);
             this.button4.TabIndex = 15;
             this.button4.Text = "EXCEL";
             this.button4.UseVisualStyleBackColor = false;
@@ -81,10 +81,10 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(261, 34);
+            this.button5.Location = new System.Drawing.Point(927, 44);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(78, 37);
+            this.button5.Size = new System.Drawing.Size(78, 29);
             this.button5.TabIndex = 14;
             this.button5.Text = "WORD";
             this.button5.UseVisualStyleBackColor = false;
@@ -95,10 +95,10 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(184, 34);
+            this.button6.Location = new System.Drawing.Point(850, 44);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(71, 37);
+            this.button6.Size = new System.Drawing.Size(71, 29);
             this.button6.TabIndex = 13;
             this.button6.Text = "PDF";
             this.button6.UseVisualStyleBackColor = false;
@@ -106,12 +106,13 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(792, 78);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(493, 533);
+            this.dataGridView1.Size = new System.Drawing.Size(353, 533);
             this.dataGridView1.TabIndex = 17;
             // 
             // chart1
@@ -120,22 +121,22 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(18, 78);
+            this.chart1.Location = new System.Drawing.Point(12, 9);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(768, 533);
+            this.chart1.Size = new System.Drawing.Size(774, 602);
             this.chart1.TabIndex = 18;
             this.chart1.Text = "chart1";
             // 
             // UrunKarZararRapor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1297, 623);
+            this.ClientSize = new System.Drawing.Size(1158, 623);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);

@@ -156,7 +156,7 @@ namespace MarketProject.Forms.Admin
             int id = Int32.Parse(dataGridView1.Rows[select].Cells[0].Value.ToString());
 
             supplier = _supplierService.GetById(id).Data;
-            textBox2.Text = dataGridView1.Rows[select].Cells[1].Value.ToString() + dataGridView1.Rows[select].Cells[2].Value.ToString();
+            textBox2.Text = dataGridView1.Rows[select].Cells[1].Value.ToString() + " " + dataGridView1.Rows[select].Cells[2].Value.ToString();
         }
 
         private void button4_Click(object sender, EventArgs e)

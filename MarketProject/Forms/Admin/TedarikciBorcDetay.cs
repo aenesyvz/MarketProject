@@ -36,7 +36,7 @@ namespace MarketProject.Forms.Admin
             if(textBox1.Text != null){
                 if(Convert.ToInt32(textBox1.Text) > debtSupplier.RemaingDebt)
                 {
-                    MessageBox.Show("Uyarı", "Ödeyeceğiniz tutar kalan borçtan büyük olduğundan işlem gerçekleştirilmeyek!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Ödeyeceğiniz tutar kalan borçtan büyük olduğundan işlem gerçekleştirilmeyek!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 DebtSupplier updatedDebtSupplier = new DebtSupplier()
@@ -61,6 +61,7 @@ namespace MarketProject.Forms.Admin
                 textBox5.Text ="";
                 textBox6.Text = "";
                 textBox7.Text = "";
+                textBox1.Text = "";
             }
             else
             {

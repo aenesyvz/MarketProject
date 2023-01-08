@@ -48,7 +48,7 @@ namespace MarketProject.Forms.Admin
             if (response.Success)
             {
                 LoadData();
-                MessageBox.Show("Müşteri Eklendi", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Tedarikçi Eklendi", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
