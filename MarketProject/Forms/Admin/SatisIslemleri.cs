@@ -96,7 +96,6 @@ namespace MarketProject.Forms.Admin
                         string productName = product.Name;
                         //               0         1       2         3             4               5        6             7
                         string temp = barcode + " => " + amount + " * " + product.UnitOfPrice + " = " + amount * product.UnitOfPrice;
-                        //string temp = productName + " [" + barcode + "]" + " => " + amount + " Adet *" + product.UnitOfPrice + " => " + amount * product.UnitOfPrice;
                         totalPrice += product.UnitOfPrice * amount;
                         listBox1.Items.Add(temp);
                         MessageBox.Show("Ürün Sepete Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);

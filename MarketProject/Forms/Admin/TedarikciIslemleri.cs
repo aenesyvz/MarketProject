@@ -50,6 +50,9 @@ namespace MarketProject.Forms.Admin
                 LoadData();
                 MessageBox.Show("Tedarikçi Eklendi", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -64,11 +67,19 @@ namespace MarketProject.Forms.Admin
             };
             _supplierService.Update(updatedSupplier);
             LoadData();
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            _supplierService.Delete(supplier);
+            var response = _supplierService.Delete(supplier);
+            if (!response.Success)
+            {
+                MessageBox.Show("Tedarikçi silinemez!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
             LoadData();
         }
         private void LoadData()

@@ -50,7 +50,8 @@ namespace MarketProject.Forms.Admin
         private void button2_Click(object sender, EventArgs e)
         {
             MusteriBorcOdeme musteriBorcOdeme = new MusteriBorcOdeme(debtCustomer.Id);
-            musteriBorcOdeme.Show();
+            musteriBorcOdeme.ShowDialog();
+            LoadData();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

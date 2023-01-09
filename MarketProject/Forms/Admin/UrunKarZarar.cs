@@ -27,12 +27,12 @@ namespace MarketProject.Forms.Admin
             
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
             // word raporu hazırlasın
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
             // excel raporu hazırlasın
         }
@@ -54,7 +54,8 @@ namespace MarketProject.Forms.Admin
                 productProfitAndDamageList = response.Data;
                 dataGridView1.DataSource = response.Data;
                 chart1.DataSource = response.Data;
-                chart1.Series["Series1"].XValueMember = "Barcode";
+                chart1.ChartAreas["ChartArea1"].AxisX.Interval = 1;
+                chart1.Series["Series1"].XValueMember = "ProductName";
                 chart1.Series["Series1"].YValueMembers = "Result";
             }
             else

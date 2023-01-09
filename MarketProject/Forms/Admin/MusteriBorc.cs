@@ -46,7 +46,8 @@ namespace MarketProject.Forms.Admin
         private void button2_Click(object sender, EventArgs e)
         {
             MusteriBorcDetay musteriBorcDetay = new MusteriBorcDetay(_customerId);
-            musteriBorcDetay.Show();
+            musteriBorcDetay.ShowDialog();
+            LoadData();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -73,7 +74,6 @@ namespace MarketProject.Forms.Admin
             {
                 customerTotalDebts = response.Data;
                 dataGridView1.DataSource = customerTotalDebts;
-                //MessageBox.Show(customerTotalDebts.Count.ToString(), "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

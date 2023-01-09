@@ -87,35 +87,20 @@ namespace MarketProject.Forms.Admin
                         product.UnitOfPrice = Convert.ToDecimal(waybill.Price * _kar / 100);
                         _productService.Update(product);
                     }
-
-                    //var debtSupplier = _debtSupplierService.GetBySupplierId(waybill.SupplierId).Data;
-                    //if (debtSupplier == null)
-                    //{
-                        DebtSupplier createdDebtSupplier = new DebtSupplier()
-                        {
-                            SupplierId = waybill.SupplierId,
-                            AddedDate = DateTime.Now,
-                            AmountPaid = 0,
-                            AmountOfDebt = (float)Convert.ToDouble(waybill.Amount * waybill.Price),
-                            RemaingDebt = (float)Convert.ToDouble(waybill.Amount * waybill.Price),
-                        };
-                        _debtSupplierService.Add(createdDebtSupplier);
-                    //}
-                    //else
-                    //{
-                    //    debtSupplier.AmountOfDebt += (float)Convert.ToDouble(waybill.Amount * waybill.Price);
-                    //    debtSupplier.RemaingDebt += (float)Convert.ToDouble(waybill.Amount * waybill.Price);
-                    //    _debtSupplierService.Update(debtSupplier);
-                    //}
+                    DebtSupplier createdDebtSupplier = new DebtSupplier()
+                    {
+                        SupplierId = waybill.SupplierId,
+                        AddedDate = DateTime.Now,
+                        AmountPaid = 0,
+                        AmountOfDebt = (float)Convert.ToDouble(waybill.Amount * waybill.Price),
+                        RemaingDebt = (float)Convert.ToDouble(waybill.Amount * waybill.Price),
+                    };
+                    _debtSupplierService.Add(createdDebtSupplier);
                 }
             }
 
         }
 
-        //private void UrunStoklari_Load(object sender, EventArgs e)
-        //{
-        //    LoadData();
-        //}
         private void LoadData()
         {
             var response = _supplierService.GetList();
@@ -130,20 +115,6 @@ namespace MarketProject.Forms.Admin
                 MessageBox.Show("Tedarikçiler getirilemedi", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        //private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    int select = dataGridView1.SelectedCells[0].RowIndex;
-        //    int id = Int32.Parse(dataGridView1.Rows[select].Cells[0].Value.ToString());
-
-        //    supplier = _supplierService.GetById(id).Data;
-        //    textBox2.Text = dataGridView1.Rows[select].Cells[1].Value.ToString() + dataGridView1.Rows[select].Cells[2].Value.ToString();
-        //}
-
-        //private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        //{
-
-        //}
 
         private void UrunEkleme_Load(object sender, EventArgs e)
         {

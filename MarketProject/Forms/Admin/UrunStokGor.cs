@@ -53,6 +53,12 @@ namespace MarketProject.Forms.Admin
             };
             _productService.Update(updatedProduct);
             LoadData();
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -60,14 +66,8 @@ namespace MarketProject.Forms.Admin
 
             _productService.Delete(product);
             LoadData();
-            //UrunSilmeOnay urunSil = new UrunSilmeOnay();
-            //urunSil.Show();
-
-            ///*if (...?){
-            //    _productService.Delete(product);
-            //    LoadData();
-            //}*/
         }
+
         private void LoadData()
         {
             var response = _productService.GetList();

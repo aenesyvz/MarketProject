@@ -173,9 +173,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(547, 11);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(451, 24);
+            this.label7.Size = new System.Drawing.Size(445, 24);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Aşağıdaki ürünlerin stok sayısı 100\'ün altına inmiştir !!!";
+            this.label7.Text = "Aşağıdaki ürünlerin stok sayısı 50\'nin altına inmiştir !!!";
             // 
             // StokTakip
             // 

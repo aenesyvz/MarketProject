@@ -58,7 +58,8 @@ namespace MarketProject.Forms.Admin
         private void button2_Click(object sender, EventArgs e)
         {
             TedarikciBorcDetay tedarikciBorcDetay = new TedarikciBorcDetay(supplierId);
-            tedarikciBorcDetay.Show();
+            tedarikciBorcDetay.ShowDialog();
+            LoadData();
         }
     }
 }

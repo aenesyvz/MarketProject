@@ -46,9 +46,6 @@ namespace MarketProject.Forms.Admin
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelStokGor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -71,14 +68,11 @@ namespace MarketProject.Forms.Admin
             this.panelStokGor.Controls.Add(this.textBox4);
             this.panelStokGor.Controls.Add(this.textBox3);
             this.panelStokGor.Controls.Add(this.textBox2);
-            this.panelStokGor.Controls.Add(this.button1);
-            this.panelStokGor.Controls.Add(this.label2);
-            this.panelStokGor.Controls.Add(this.textBox1);
             this.panelStokGor.Controls.Add(this.dataGridView1);
             this.panelStokGor.Location = new System.Drawing.Point(0, -1);
             this.panelStokGor.Margin = new System.Windows.Forms.Padding(2);
             this.panelStokGor.Name = "panelStokGor";
-            this.panelStokGor.Size = new System.Drawing.Size(1150, 503);
+            this.panelStokGor.Size = new System.Drawing.Size(1102, 503);
             this.panelStokGor.TabIndex = 1;
             // 
             // label8
@@ -231,50 +225,16 @@ namespace MarketProject.Forms.Admin
             this.textBox2.Size = new System.Drawing.Size(188, 24);
             this.textBox2.TabIndex = 4;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(200)))), ((int)(((byte)(188)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Snow;
-            this.button1.Location = new System.Drawing.Point(874, 10);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 32);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "ARA";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(508, 15);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 24);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Ürün Ara =";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(613, 15);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(257, 24);
-            this.textBox1.TabIndex = 1;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(337, 50);
+            this.dataGridView1.Location = new System.Drawing.Point(337, 12);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(753, 442);
+            this.dataGridView1.Size = new System.Drawing.Size(753, 480);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -304,9 +264,6 @@ namespace MarketProject.Forms.Admin
         #endregion
         private Panel panelStokGor;
         private TextBox textBox2;
-        private Button button1;
-        private Label label2;
-        private TextBox textBox1;
         private DataGridView dataGridView1;
         private TextBox textBox6;
         private TextBox textBox5;

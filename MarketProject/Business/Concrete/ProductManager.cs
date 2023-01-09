@@ -47,7 +47,7 @@ namespace MarketProject.Business.Concrete
 
         public IDataResult<List<Product>> GetListLowStockProduct()
         {
-            return new SuccessDataResult<List<Product>>(_productDal.GetList().Where(x => x.Amount < 100).ToList());
+            return new SuccessDataResult<List<Product>>(_productDal.GetList().Where(x => x.Amount < 50).ToList());
         }
 
         public IDataResult<List<ProductProfitAndDamageDto>> GetListProductProfitAndDamage()

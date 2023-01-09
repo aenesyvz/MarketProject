@@ -96,11 +96,8 @@ namespace MarketProject.Forms.Admin
             {
                 supplier = responseSupplier.Data;
                 textBox2.Text = supplier.FirstName;
-                //label15.Text = supplier.FirstName;
                 textBox3.Text = supplier.LastName;
-                //label16.Text = supplier.FirstName;
                 textBox4.Text = supplier.PhoneNumber;
-                //label17.Text = supplier.PhoneNumber;
 
                 debtSuppliers = responseDebtSupplier.Data;
                 dataGridView1.DataSource = debtSuppliers;

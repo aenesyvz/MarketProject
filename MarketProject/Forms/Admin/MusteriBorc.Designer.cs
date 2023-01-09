@@ -210,6 +210,7 @@ namespace MarketProject.Forms.Admin
             this.textBox5.Location = new System.Drawing.Point(203, 347);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(294, 24);
             this.textBox5.TabIndex = 13;
             // 
@@ -219,6 +220,7 @@ namespace MarketProject.Forms.Admin
             this.textBox6.Location = new System.Drawing.Point(203, 397);
             this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(294, 24);
             this.textBox6.TabIndex = 14;
             // 

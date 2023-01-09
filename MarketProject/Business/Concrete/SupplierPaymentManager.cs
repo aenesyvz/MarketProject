@@ -35,34 +35,10 @@ namespace MarketProject.Business.Concrete
             return new SuccessDataResult<List<SupplierPaymentDto>>(_supplierPaymentDal.GetListSupplierPayment());
         }
 
-        //ÇALIŞAN KOD
         public IResult Update(SupplierPayment supplierPayment)
         {
             _supplierPaymentDal.Update(supplierPayment);
             return new SuccessResult();
         }
-
-
-        // Business Rules
-
-        /*public IResult Update(SupplierPayment supplierPayment)
-        {
-            IResult result = BusinessRules.Run(CheckIfDebtExists(supplierPayment.Payment));
-            if (result != null)
-            {
-                return result;
-            }
-            _supplierPaymentDal.Update(supplierPayment);
-            return new SuccessResult();
-        }
-        private IResult CheckIfDebtExists(decimal Payment)
-        {
-            var result = _supplierPaymentDal .GetList(x => x.Payment == Payment).ToList().Any();
-            if (result)
-            {
-                return new ErrorResult("Tedarikçinin ödenmemiş bir borcu vardır. Tedarikçi silinemez!");
-            }
-            return new SuccessResult();
-        }*/
     }
 }

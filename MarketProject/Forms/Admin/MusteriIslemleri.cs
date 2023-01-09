@@ -49,6 +49,9 @@ namespace MarketProject.Forms.Admin
             {
                 MessageBox.Show("Bu telefon numarasına sahip bir müşteri zaten kayıtlı!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
         }
 
         private void LoadData()
@@ -86,7 +89,9 @@ namespace MarketProject.Forms.Admin
             {
                 MessageBox.Show("Bu telefon numarasına sahip bir müşteri zaten kayıtlı!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -105,32 +110,5 @@ namespace MarketProject.Forms.Admin
             textBox2.Text = dataGridView1.Rows[select].Cells[2].Value.ToString();
             textBox3.Text = dataGridView1.Rows[select].Cells[3].Value.ToString();
         }
-
-        //private void button2_Click(object sender, EventArgs e)
-        //{
-        //    Customer updatedCustomer = new Customer()
-        //    {
-        //        Id = customer.Id,
-        //        FirstName = textBox1.Text,
-        //        LastName = textBox2.Text,
-        //        PhoneNumber = textBox3.Text,
-        //        AddedDate = customer.AddedDate
-        //    };
-        //    _customerService.Update(updatedCustomer);
-        //    LoadData();
-        //}
-
-        //private void button3_Click(object sender, EventArgs e)
-        //{
-        //    _customerService.Delete(customer);
-        //    LoadData();
-        //}
-
-        //private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        //{
-
-
-
-        //}
     }
 }
