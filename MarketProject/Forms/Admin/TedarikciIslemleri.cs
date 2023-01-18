@@ -50,6 +50,10 @@ namespace MarketProject.Forms.Admin
                 LoadData();
                 MessageBox.Show("Tedarikçi Eklendi", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else
+            {
+                MessageBox.Show("Bu telefon numarasına ait bir tedarikçi zaten var", "Başarısız", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";

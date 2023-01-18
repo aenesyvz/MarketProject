@@ -15,6 +15,11 @@ namespace MarketProject.Business.Concrete
         private readonly IWaybillDal _waybillDal = new EfWaybillDal();
         public IResult Add(Supplier supplier)
         {
+            IResult result = BusinessRules.Run(CheckIfPhoneNumberExists(supplier.PhoneNumber));
+            if (result != null)
+            {
+                return result;
+            }
             _supplierDal.Add(supplier);
             return new SuccessResult();
         }
@@ -58,6 +63,15 @@ namespace MarketProject.Business.Concrete
             if (result)
             {
                 return new ErrorResult("Tedarikçi silinemez");
+            }
+            return new SuccessResult();
+        }
+        private IResult CheckIfPhoneNumberExists(string phoneNumber)
+        {
+            var result = _supplierDal.GetList(x => x.PhoneNumber == phoneNumber).ToList().Any();
+            if (result)
+            {
+                return new ErrorResult("Bu telefon numarasına ait bir müşteri zaten bulunmaktadır!");
             }
             return new SuccessResult();
         }
